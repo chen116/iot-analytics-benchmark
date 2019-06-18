@@ -32,12 +32,12 @@ import java.time._
 
 object iotstream_lr_kafka {
   def main(args: Array[String]) {
-  
+
     if (args.length != 7) {
       System.err.println("Usage: spark-submit --name iotstream_lr_kafka --class com.iotstream.iotstream_lr_kafka <path>iotstream_<scala version>-<code version>.jar n_sensors reporting_interval kafka_server_list kafka_topic HDFS_or_S3 HDFS_path_or_S3_bucket modelname")
       System.exit(-1)
     }
-  
+
     val n_sensors = args(0).toInt
     val reporting_interval = args(1).toLong
     val kafka_server_list = args(2)
@@ -47,7 +47,7 @@ object iotstream_lr_kafka {
       if (args(4).capitalize == "S3") "s3a://%s/%s".format(args(5), args(6))
       else "%s/%s".format(args(5), args(6))
     }
-  
+
     println("%s: Analyzing stream of input from kafka topic %s with kafka server(s) %s, using LR model %s, with %d second intervals".format(Instant.now.toString, topic, kafka_server_list, modelname, reporting_interval))
 
     // Initialize streaming for specified reporting interval
@@ -74,7 +74,7 @@ object iotstream_lr_kafka {
       if (rdd.count == 0) {
         empty_intervals.add(1)
         println("No input")
-      } 
+      }
       else {
         // Each line of input has format Timestamp (string), sensor number (integer), sensor name (string), sensor value (float), eg
         // 2017-12-14T22:22:43.895Z,19,Sensor 19,0.947640
@@ -102,7 +102,7 @@ object iotstream_lr_kafka {
     //sensor_stream.print()
     // Discretized stream consists of (offset, RDD) tuples; discard offset
     sensor_stream.map(_._2).foreachRDD(run_model(_))
-     
+
     // Start reading streaming data
     ssc.start()
     val start_time = System.nanoTime

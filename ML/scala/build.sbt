@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-log4j12" % "1.7.25",
   "com.amazonaws" % "aws-java-sdk" % "1.7.4",
   "org.apache.hadoop" % "hadoop-aws" % "2.7.3",
+  "org.apache.kafka" % "kafka-clients" % "0.10.0.0",
 )
 
 assemblyMergeStrategy in assembly := {
