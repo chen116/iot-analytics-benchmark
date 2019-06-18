@@ -78,8 +78,8 @@ object infer_cifar_stream_kafka {
 
     // kafka out
     val props = new Properties()
-    props.put("bootstrap.servers", "hpc0990:9092")
-    props.put("client.id", "viccc")
+    props.put("bootstrap.servers", "hpc0981:9092")
+    props.put("client.id", "viccc2")
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     val kaf_producer = new KafkaProducer[String,String](props)
@@ -149,7 +149,7 @@ object infer_cifar_stream_kafka {
       val topic = "meow"
       val ssc = new StreamingContext(sc, Seconds(reporting_interval))
       val topicsSet = List(topic).toSet
-      val kafkaParams = Map[String, String]("bootstrap.servers" -> "hpc0990:9092")
+      val kafkaParams = Map[String, String]("bootstrap.servers" -> "hpc0981:9092")
       val image_stream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topicsSet)
       // end kafka stream in
 

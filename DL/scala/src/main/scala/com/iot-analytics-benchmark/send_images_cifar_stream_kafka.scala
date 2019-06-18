@@ -99,7 +99,7 @@ object send_images_cifar_stream_kafka {
 
     // kafka out
     val props = new Properties()
-    props.put("bootstrap.servers", "hpc0990:9092")
+    props.put("bootstrap.servers", "hpc0981:9092")
     props.put("client.id", "viccc")
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
