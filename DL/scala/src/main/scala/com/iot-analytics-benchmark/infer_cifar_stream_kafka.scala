@@ -42,6 +42,11 @@ import org.apache.spark.streaming._
 import scopt.OptionParser
 import java.time._
 
+import org.apache.spark.streaming.kafka._
+import java.util.Properties
+import org.apache.kafka.clients.producer.{Callback, RecordMetadata, ProducerRecord, KafkaProducer}
+import scala.concurrent.Promise
+
 //object SampleToImagefeature {
 //  def apply(): SampleToImagefeature = {
 //    new SampleToImagefeature()
@@ -68,6 +73,24 @@ import java.time._
 object infer_cifar_stream_kafka {
 
   def main(args: Array[String]) {
+
+
+    val props = new Properties()
+    props.put("bootstrap.servers", "hpc0990:9092")
+    props.put("client.id", "viccc")
+    props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    val kaf_producer = new KafkaProducer[String,String](props)
+    def sendAsync(value: String):Unit = {
+      val record = new ProducerRecord[String, String]("res", value)
+      val p = Promise[(RecordMetadata, Exception)]()
+      kaf_producer.send(record, new Callback {
+        override def onCompletion(metadata: RecordMetadata, exception: Exception): Unit = {
+          p.success((metadata, exception))
+        }
+      })
+    }
+
 
     case class Params(
                        reportingInterval: Int  = 10,
@@ -165,6 +188,7 @@ object infer_cifar_stream_kafka {
           })
           tot_correct_preds.add(correct_preds)
           println("%s: %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, input_length, correct_preds, 100.0*correct_preds/input_length))
+          sendAsync("%s: %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, input_length, correct_preds, 100.0*correct_preds/input_length))
         }
       }
 
@@ -181,6 +205,10 @@ object infer_cifar_stream_kafka {
       print("\n%s: %d images received in %.1f seconds (%d intervals), or %.0f images/second. "
         .format(Instant.now.toString, images.value, elapsed_time, interval.value, images.value.toFloat/elapsed_time))
       println("%d of %d or %.1f%% predicted correctly ".format(tot_correct_preds.value, images.value, 100.0*tot_correct_preds.value/images.value))
+
+      def close():Unit = kaf_producer.close()
+      close()
+
     }
   }
 }

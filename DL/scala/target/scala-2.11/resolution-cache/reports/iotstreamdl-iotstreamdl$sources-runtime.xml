@@ -7,10 +7,22 @@
 		revision="0.0.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190618081748"/>
+		date="20190618100202"/>
 	<dependencies>
+		<module organisation="org.apache.kafka" name="kafka-clients">
+			<revision name="0.10.0.0" status="release" pubdate="20160517214431" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://kafka.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="117">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3276" time="0" location="/home/vic/.ivy2/cache/org.apache.kafka/kafka-clients/ivy-0.10.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.10.0.0/kafka-clients-0.10.0.0.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.10.0.0" rev-constraint-default="0.10.0.0" rev-constraint-dynamic="0.10.0.0" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="kafka-clients" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="554921" time="0" location="/home/vic/.ivy2/cache/org.apache.kafka/kafka-clients/srcs/kafka-clients-0.10.0.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.10.0.0/kafka-clients-0.10.0.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.11.8" status="release" pubdate="20160304072641" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="111">
+			<revision name="2.11.8" status="release" pubdate="20160304072641" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2825" time="0" location="/home/vic/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.0.1" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/"/>
@@ -22,7 +34,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-math3">
-			<revision name="3.1.1" status="release" pubdate="20130109081459" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/math/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
+			<revision name="3.1.1" status="release" pubdate="20130109081459" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/math/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="105">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8364" time="0" location="/home/vic/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="0.0.1"/>
@@ -34,7 +46,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-net" name="commons-net">
-			<revision name="3.1" status="release" pubdate="20120214104231" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
+			<revision name="3.1" status="release" pubdate="20120214104231" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8062" time="0" location="/home/vic/.ivy2/cache/commons-net/commons-net/ivy-3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-net/commons-net/3.1/commons-net-3.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.0.1"/>
@@ -46,7 +58,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.curator" name="curator-recipes">
-			<revision name="2.12.0" status="release" pubdate="20170228191744" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
+			<revision name="2.12.0" status="release" pubdate="20170228191744" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="13006" time="0" location="/home/vic/.ivy2/cache/org.apache.curator/curator-recipes/ivy-2.12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/curator/curator-recipes/2.12.0/curator-recipes-2.12.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.12.0" rev-constraint-default="2.12.0" rev-constraint-dynamic="2.12.0" callerrev="0.0.1"/>
@@ -58,7 +70,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-auth">
-			<revision name="3.0.0" status="release" pubdate="20171208121503" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
+			<revision name="3.0.0" status="release" pubdate="20171208121503" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="49660" time="0" location="/home/vic/.ivy2/cache/org.apache.hadoop/hadoop-auth/ivy-3.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-auth/3.0.0/hadoop-auth-3.0.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.0.1"/>
@@ -70,7 +82,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-simplekdc">
-			<revision name="1.0.1" status="release" pubdate="20170830031214" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="105">
+			<revision name="1.0.1" status="release" pubdate="20170830031214" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6961" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-simplekdc/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -82,7 +94,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-admin">
-			<revision name="1.0.1" status="release" pubdate="20170830031155" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="115">
+			<revision name="1.0.1" status="release" pubdate="20170830031155" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="118">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7108" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-admin/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -94,7 +106,7 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-log4j12">
-			<revision name="1.7.25" status="release" pubdate="20170316093700" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
+			<revision name="1.7.25" status="release" pubdate="20170316093700" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="5491" time="0" location="/home/vic/.ivy2/cache/org.slf4j/slf4j-log4j12/ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.0.1"/>
@@ -106,7 +118,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.curator" name="curator-framework">
-			<revision name="2.12.0" status="release" pubdate="20170228191727" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
+			<revision name="2.12.0" status="release" pubdate="20170228191727" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="12730" time="0" location="/home/vic/.ivy2/cache/org.apache.curator/curator-framework/ivy-2.12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/curator/curator-framework/2.12.0/curator-framework-2.12.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.12.0" rev-constraint-default="2.12.0" rev-constraint-dynamic="2.12.0" callerrev="0.0.1"/>
@@ -118,7 +130,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-cli" name="commons-cli">
-			<revision name="1.2" status="release" pubdate="20090319130832" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/cli/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
+			<revision name="1.2" status="release" pubdate="20090319130832" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/cli/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4697" time="0" location="/home/vic/.ivy2/cache/commons-cli/commons-cli/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-cli/commons-cli/1.2/commons-cli-1.2.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.0.1"/>
@@ -130,7 +142,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-server">
-			<revision name="1.0.1" status="release" pubdate="20170830031132" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
+			<revision name="1.0.1" status="release" pubdate="20170830031132" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7078" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-server/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -142,7 +154,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-identity">
-			<revision name="1.0.1" status="release" pubdate="20170830031003" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="90">
+			<revision name="1.0.1" status="release" pubdate="20170830031003" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6963" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-identity/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -154,7 +166,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.code.gson" name="gson">
-			<revision name="2.2.4" status="release" pubdate="20130513145652" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="89">
+			<revision name="2.2.4" status="release" pubdate="20130513145652" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="91">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3381" time="0" location="/home/vic/.ivy2/cache/com.google.code.gson/gson/ivy-2.2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.2.4/gson-2.2.4.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.2.4" rev-constraint-default="2.2.4" rev-constraint-dynamic="2.2.4" callerrev="0.0.1"/>
@@ -166,7 +178,7 @@
 			</revision>
 		</module>
 		<module organisation="com.jcraft" name="jsch">
-			<revision name="0.1.54" status="release" pubdate="20160903024216" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
+			<revision name="0.1.54" status="release" pubdate="20160903024216" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="88">
 				<license name="Revised BSD" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3103" time="0" location="/home/vic/.ivy2/cache/com.jcraft/jsch/ivy-0.1.54.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.54/jsch-0.1.54.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.1.54" rev-constraint-default="0.1.54" rev-constraint-dynamic="0.1.54" callerrev="0.0.1"/>
@@ -178,7 +190,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.htrace" name="htrace-core4">
-			<revision name="4.1.0-incubating" status="release" pubdate="20160209164022" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://incubator.apache.org/projects/htrace.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="85">
+			<revision name="4.1.0-incubating" status="release" pubdate="20160209164022" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://incubator.apache.org/projects/htrace.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6769" time="0" location="/home/vic/.ivy2/cache/org.apache.htrace/htrace-core4/ivy-4.1.0-incubating.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="4.1.0-incubating" rev-constraint-default="4.1.0-incubating" rev-constraint-dynamic="4.1.0-incubating" callerrev="0.0.1"/>
@@ -190,7 +202,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-webapp">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143823" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143823" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="9307" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-webapp/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-webapp/9.3.19.v20170502/jetty-webapp-9.3.19.v20170502.pom"/>
@@ -203,7 +215,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-codec" name="commons-codec">
-			<revision name="1.4" status="release" pubdate="20090809142217" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/codec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="80">
+			<revision name="1.4" status="release" pubdate="20090809142217" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/codec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5231" time="0" location="/home/vic/.ivy2/cache/commons-codec/commons-codec/ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="0.0.1"/>
@@ -215,7 +227,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-servlet">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143756" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143756" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="9376" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-servlet/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlet/9.3.19.v20170502/jetty-servlet-9.3.19.v20170502.pom"/>
@@ -228,7 +240,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.re2j" name="re2j">
-			<revision name="1.1" status="release" pubdate="20151117065435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/google/re2j" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
+			<revision name="1.1" status="release" pubdate="20151117065435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/google/re2j" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
 				<license name="The Go license" url="https://golang.org/LICENSE"/>
 				<metadata-artifact status="no" details="" size="3094" time="0" location="/home/vic/.ivy2/cache/com.google.re2j/re2j/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="0.0.1"/>
@@ -240,7 +252,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.woodstox" name="woodstox-core">
-			<revision name="5.0.3" status="release" pubdate="20160823205912" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/woodstox" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
+			<revision name="5.0.3" status="release" pubdate="20160823205912" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/woodstox" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
 				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6398" time="0" location="/home/vic/.ivy2/cache/com.fasterxml.woodstox/woodstox-core/ivy-5.0.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="5.0.3" rev-constraint-default="5.0.3" rev-constraint-dynamic="5.0.3" callerrev="0.0.1"/>
@@ -252,7 +264,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-configuration2">
-			<revision name="2.1.1" status="release" pubdate="20170205054622" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-configuration/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
+			<revision name="2.1.1" status="release" pubdate="20170205054622" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-configuration/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="16732" time="0" location="/home/vic/.ivy2/cache/org.apache.commons/commons-configuration2/ivy-2.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-configuration2/2.1.1/commons-configuration2-2.1.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.1.1" rev-constraint-default="2.1.1" rev-constraint-dynamic="2.1.1" callerrev="0.0.1"/>
@@ -263,8 +275,20 @@
 				</artifacts>
 			</revision>
 		</module>
+		<module organisation="org.xerial.snappy" name="snappy-java">
+			<revision name="1.1.2.4" status="release" pubdate="20160330205008" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/xerial/snappy-java" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3450" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.1.2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.2.4/snappy-java-1.1.2.4.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.1.2.4" rev-constraint-default="1.1.2.4" rev-constraint-dynamic="1.1.2.4" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="snappy-java" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1049583" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/srcs/snappy-java-1.1.2.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.2.4/snappy-java-1.1.2.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.apache.curator" name="curator-client">
-			<revision name="2.12.0" status="release" pubdate="20170228191710" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
+			<revision name="2.12.0" status="release" pubdate="20170228191710" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="13616" time="0" location="/home/vic/.ivy2/cache/org.apache.curator/curator-client/ivy-2.12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/curator/curator-client/2.12.0/curator-client-2.12.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.12.0" rev-constraint-default="2.12.0" rev-constraint-dynamic="2.12.0" callerrev="0.0.1"/>
@@ -276,7 +300,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-client">
-			<revision name="1.0.1" status="release" pubdate="20170830031109" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="59">
+			<revision name="1.0.1" status="release" pubdate="20170830031109" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="60">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7514" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-client/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -288,7 +312,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="token-provider">
-			<revision name="1.0.1" status="release" pubdate="20170830031046" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
+			<revision name="1.0.1" status="release" pubdate="20170830031046" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6966" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/token-provider/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -300,7 +324,7 @@
 			</revision>
 		</module>
 		<module organisation="com.intel.analytics.bigdl" name="bigdl-SPARK_2.4">
-			<revision name="0.8.0" status="release" pubdate="20190327201017" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="56">
+			<revision name="0.8.0" status="release" pubdate="20190327201017" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="57">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="24746" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl/bigdl-SPARK_2.4/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/bigdl-SPARK_2.4/0.8.0/bigdl-SPARK_2.4-0.8.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.0.1"/>
@@ -312,7 +336,7 @@
 			</revision>
 		</module>
 		<module organisation="it.unimi.dsi" name="fastutil">
-			<revision name="7.0.2" status="release" pubdate="20150319125012" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://fasutil.di.unimi.it/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
+			<revision name="7.0.2" status="release" pubdate="20150319125012" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://fasutil.di.unimi.it/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="2746" time="0" location="/home/vic/.ivy2/cache/it.unimi.dsi/fastutil/ivy-7.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/it/unimi/dsi/fastutil/7.0.2/fastutil-7.0.2.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="7.0.2" rev-constraint-default="7.0.2" rev-constraint-dynamic="7.0.2" callerrev="0.0.1"/>
@@ -324,7 +348,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.guava" name="guava">
-			<revision name="11.0.2" status="release" pubdate="20120222060217" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="106">
+			<revision name="11.0.2" status="release" pubdate="20120222060217" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4094" time="0" location="/home/vic/.ivy2/cache/com.google.guava/guava/ivy-11.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/11.0.2/guava-11.0.2.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="11.0.2" rev-constraint-default="11.0.2" rev-constraint-dynamic="11.0.2" callerrev="0.0.1"/>
@@ -336,7 +360,7 @@
 			</revision>
 		</module>
 		<module organisation="com.intel.analytics.bigdl.spark-version" name="2.0-SPARK_2.4">
-			<revision name="0.8.0" status="release" pubdate="20190327200510" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
+			<revision name="0.8.0" status="release" pubdate="20190327200510" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="21825" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.spark-version/2.0-SPARK_2.4/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/spark-version/2.0-SPARK_2.4/0.8.0/2.0-SPARK_2.4-0.8.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.0.1"/>
@@ -347,20 +371,8 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.spark-project.spark" name="unused">
-			<revision name="1.0.0" status="release" pubdate="20141022000005" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
-				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2975" time="0" location="/home/vic/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="unused" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="594" time="0" location="/home/vic/.ivy2/cache/org.spark-project.spark/unused/srcs/unused-1.0.0-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="com.intel.analytics.bigdl.core.dist" name="all">
-			<revision name="0.8.0" status="release" pubdate="20190326222158" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
+			<revision name="0.8.0" status="release" pubdate="20190326222158" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3472" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.core.dist/all/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/core/dist/all/0.8.0/all-0.8.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.0.1"/>
@@ -372,7 +384,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-jpeg">
-			<revision name="3.2.1" status="release" pubdate="20151211041649" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
+			<revision name="3.2.1" status="release" pubdate="20151211041649" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
 				<metadata-artifact status="no" details="" size="6263" time="0" location="/home/vic/.ivy2/cache/com.twelvemonkeys.imageio/imageio-jpeg/ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-jpeg/3.2.1/imageio-jpeg-3.2.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.2.1" rev-constraint-default="3.2.1" rev-constraint-dynamic="3.2.1" callerrev="0.0.1"/>
 				<artifacts>
@@ -383,7 +395,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.imageio" name="imageio-metadata">
-			<revision name="3.2.1" status="release" pubdate="20151211041438" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
+			<revision name="3.2.1" status="release" pubdate="20151211041438" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
 				<metadata-artifact status="no" details="" size="6065" time="0" location="/home/vic/.ivy2/cache/com.twelvemonkeys.imageio/imageio-metadata/ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/imageio/imageio-metadata/3.2.1/imageio-metadata-3.2.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.2.1" rev-constraint-default="3.2.1" rev-constraint-dynamic="3.2.1" callerrev="0.0.1"/>
 				<artifacts>
@@ -394,7 +406,7 @@
 			</revision>
 		</module>
 		<module organisation="com.twelvemonkeys.common" name="common-image">
-			<revision name="3.2.1" status="release" pubdate="20151211041343" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
+			<revision name="3.2.1" status="release" pubdate="20151211041343" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="119">
 				<metadata-artifact status="no" details="" size="4520" time="0" location="/home/vic/.ivy2/cache/com.twelvemonkeys.common/common-image/ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-image/3.2.1/common-image-3.2.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.2.1" rev-constraint-default="3.2.1" rev-constraint-dynamic="3.2.1" callerrev="0.0.1"/>
 				<artifacts>
@@ -405,7 +417,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.opennlp" name="opennlp-tools">
-			<revision name="1.6.0" status="release" pubdate="20150616063739" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
+			<revision name="1.6.0" status="release" pubdate="20150616063739" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="80">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5078" time="0" location="/home/vic/.ivy2/cache/org.apache.opennlp/opennlp-tools/ivy-1.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.6.0/opennlp-tools-1.6.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="0.0.1"/>
@@ -417,7 +429,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-xdr">
-			<revision name="1.0.1" status="release" pubdate="20170830030714" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
+			<revision name="1.0.1" status="release" pubdate="20170830030714" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="56">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6662" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-xdr/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -429,7 +441,7 @@
 			</revision>
 		</module>
 		<module organisation="com.nimbusds" name="nimbus-jose-jwt">
-			<revision name="4.41.1" status="release" pubdate="20170810215745" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://bitbucket.org/connect2id/nimbus-jose-jwt" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
+			<revision name="4.41.1" status="release" pubdate="20170810215745" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://bitbucket.org/connect2id/nimbus-jose-jwt" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4251" time="0" location="/home/vic/.ivy2/cache/com.nimbusds/nimbus-jose-jwt/ivy-4.41.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/nimbusds/nimbus-jose-jwt/4.41.1/nimbus-jose-jwt-4.41.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="4.41.1" rev-constraint-default="4.41.1" rev-constraint-dynamic="4.41.1" callerrev="0.0.1"/>
@@ -441,7 +453,7 @@
 			</revision>
 		</module>
 		<module organisation="net.minidev" name="json-smart">
-			<revision name="2.3" status="release" pubdate="20170326005657" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="58">
+			<revision name="2.3" status="release" pubdate="20170326005657" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="59">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4937" time="0" location="/home/vic/.ivy2/cache/net.minidev/json-smart/ivy-2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/minidev/json-smart/2.3/json-smart-2.3.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.3" rev-constraint-default="2.3" rev-constraint-dynamic="2.3" callerrev="0.0.1"/>
@@ -453,7 +465,7 @@
 			</revision>
 		</module>
 		<module organisation="net.minidev" name="accessors-smart">
-			<revision name="1.2" status="release" pubdate="20170326005643" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
+			<revision name="1.2" status="release" pubdate="20170326005643" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="85">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3480" time="0" location="/home/vic/.ivy2/cache/net.minidev/accessors-smart/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/minidev/accessors-smart/1.2/accessors-smart-1.2.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.0.1"/>
@@ -465,7 +477,7 @@
 			</revision>
 		</module>
 		<module organisation="com.sun.jersey" name="jersey-json">
-			<revision name="1.19" status="release" pubdate="20150211035615" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
+			<revision name="1.19" status="release" pubdate="20150211035615" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
 				<license name="CDDL 1.1" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<metadata-artifact status="no" details="" size="6964" time="0" location="/home/vic/.ivy2/cache/com.sun.jersey/jersey-json/ivy-1.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sun/jersey/jersey-json/1.19/jersey-json-1.19.pom"/>
@@ -478,7 +490,7 @@
 			</revision>
 		</module>
 		<module organisation="org.codehaus.jackson" name="jackson-jaxrs">
-			<revision name="1.9.2" status="release" pubdate="20111104194057" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="57">
+			<revision name="1.9.2" status="release" pubdate="20111104194057" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="58">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<license name="GNU Lesser General Public License (LGPL), Version 2.1" url="http://www.fsf.org/licensing/licenses/lgpl.txt"/>
 				<metadata-artifact status="no" details="" size="3072" time="0" location="/home/vic/.ivy2/cache/org.codehaus.jackson/jackson-jaxrs/ivy-1.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.pom"/>
@@ -491,7 +503,7 @@
 			</revision>
 		</module>
 		<module organisation="org.codehaus.jettison" name="jettison">
-			<revision name="1.1" status="release" pubdate="20090420095050" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
+			<revision name="1.1" status="release" pubdate="20090420095050" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="89">
 				<metadata-artifact status="no" details="" size="2871" time="0" location="/home/vic/.ivy2/cache/org.codehaus.jettison/jettison/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/jettison/jettison/1.1/jettison-1.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="0.0.1"/>
 				<artifacts>
@@ -514,7 +526,7 @@
 			</revision>
 		</module>
 		<module organisation="jline" name="jline">
-			<revision name="0.9.94" status="release" pubdate="20080222115343" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="117">
+			<revision name="0.9.94" status="release" pubdate="20080222115343" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="120">
 				<license name="BSD" url="LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="2968" time="0" location="/home/vic/.ivy2/cache/jline/jline/ivy-0.9.94.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/jline/jline/0.9.94/jline-0.9.94.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.9.94" rev-constraint-default="0.9.94" rev-constraint-dynamic="0.9.94" callerrev="0.0.1"/>
@@ -562,7 +574,7 @@
 			</revision>
 		</module>
 		<module organisation="javax.xml.bind" name="jaxb-api">
-			<revision name="2.2.2" status="release" pubdate="20101212194445" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://jaxb.dev.java.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
+			<revision name="2.2.2" status="release" pubdate="20101212194445" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://jaxb.dev.java.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
 				<license name="CDDL 1.1" url="https://glassfish.dev.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="https://glassfish.dev.java.net/public/CDDL+GPL_1_1.html"/>
 				<metadata-artifact status="no" details="" size="2997" time="0" location="/home/vic/.ivy2/cache/javax.xml.bind/jaxb-api/ivy-2.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.pom"/>
@@ -587,7 +599,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-compress">
-			<revision name="1.4.1" status="release" pubdate="20120521215732" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/compress/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
+			<revision name="1.4.1" status="release" pubdate="20120521215732" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/compress/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="111">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8141" time="0" location="/home/vic/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.4.1" rev-constraint-default="1.4.1" rev-constraint-dynamic="1.4.1" callerrev="0.0.1"/>
@@ -599,7 +611,7 @@
 			</revision>
 		</module>
 		<module organisation="com.thoughtworks.paranamer" name="paranamer">
-			<revision name="2.3" status="release" pubdate="20101019061431" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
+			<revision name="2.3" status="release" pubdate="20101019061431" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
 				<license name="BSD" url="LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3466" time="0" location="/home/vic/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.3" rev-constraint-default="2.3" rev-constraint-dynamic="2.3" callerrev="0.0.1"/>
@@ -659,7 +671,7 @@
 			</revision>
 		</module>
 		<module organisation="org.spire-math" name="spire_2.11">
-			<revision name="0.7.4" status="release" pubdate="20140424082931" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spire-math.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="112">
+			<revision name="0.7.4" status="release" pubdate="20140424082931" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spire-math.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
 				<license name="BSD-style" url="http://opensource.org/licenses/MIT"/>
 				<metadata-artifact status="no" details="" size="3163" time="0" location="/home/vic/.ivy2/cache/org.spire-math/spire_2.11/ivy-0.7.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/spire_2.11/0.7.4/spire_2.11-0.7.4.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.7.4" rev-constraint-default="0.7.4" rev-constraint-dynamic="0.7.4" callerrev="0.0.1"/>
@@ -671,7 +683,7 @@
 			</revision>
 		</module>
 		<module organisation="org.spire-math" name="spire-macros_2.11">
-			<revision name="0.7.4" status="release" pubdate="20140424082231" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spire-math.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
+			<revision name="0.7.4" status="release" pubdate="20140424082231" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spire-math.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
 				<license name="BSD-style" url="http://opensource.org/licenses/MIT"/>
 				<metadata-artifact status="no" details="" size="3034" time="0" location="/home/vic/.ivy2/cache/org.spire-math/spire-macros_2.11/ivy-0.7.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/spire-macros_2.11/0.7.4/spire-macros_2.11-0.7.4.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.7.4" rev-constraint-default="0.7.4" rev-constraint-dynamic="0.7.4" callerrev="0.0.1"/>
@@ -683,7 +695,7 @@
 			</revision>
 		</module>
 		<module organisation="com.github.rwl" name="jtransforms">
-			<revision name="2.4.0" status="release" pubdate="20120519070656" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://sourceforge.net/projects/jtransforms/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
+			<revision name="2.4.0" status="release" pubdate="20120519070656" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://sourceforge.net/projects/jtransforms/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
 				<license name="MPL" url="http://www.mozilla.org/MPL/2.0/index.txt"/>
 				<license name="LGPL" url="http://www.gnu.org/licenses/lgpl-2.1.txt"/>
 				<license name="GPL" url="http://www.gnu.org/licenses/gpl-2.0.txt"/>
@@ -709,7 +721,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalanlp" name="breeze-macros_2.11">
-			<revision name="0.11.2" status="release" pubdate="20150325231250" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalanlp.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
+			<revision name="0.11.2" status="release" pubdate="20150325231250" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalanlp.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="3151" time="0" location="/home/vic/.ivy2/cache/org.scalanlp/breeze-macros_2.11/ivy-0.11.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalanlp/breeze-macros_2.11/0.11.2/breeze-macros_2.11-0.11.2.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="0.11.2" rev-constraint-default="0.11.2" rev-constraint-dynamic="0.11.2" callerrev="0.0.1"/>
@@ -745,7 +757,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-project">
-			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
+			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="112">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8376" time="0" location="/home/vic/.ivy2/cache/org.apache.maven/maven-project/ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-project/2.0.8/maven-project-2.0.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="0.0.1"/>
@@ -757,7 +769,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-profile">
-			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="79">
+			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7371" time="0" location="/home/vic/.ivy2/cache/org.apache.maven/maven-profile/ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-profile/2.0.8/maven-profile-2.0.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="0.0.1"/>
@@ -769,7 +781,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-settings">
-			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
+			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7373" time="0" location="/home/vic/.ivy2/cache/org.apache.maven/maven-settings/ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-settings/2.0.8/maven-settings-2.0.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="0.0.1"/>
@@ -781,7 +793,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-model">
-			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="91">
+			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7073" time="0" location="/home/vic/.ivy2/cache/org.apache.maven/maven-model/ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-model/2.0.8/maven-model-2.0.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="0.0.1"/>
@@ -817,7 +829,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven.wagon" name="wagon-provider-api">
-			<revision name="1.0-beta-2" status="release" pubdate="20061212140244" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
+			<revision name="1.0-beta-2" status="release" pubdate="20061212140244" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="115">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4143" time="0" location="/home/vic/.ivy2/cache/org.apache.maven.wagon/wagon-provider-api/ivy-1.0-beta-2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0-beta-2" rev-constraint-default="1.0-beta-2" rev-constraint-dynamic="1.0-beta-2" callerrev="0.0.1"/>
@@ -829,7 +841,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-artifact">
-			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
+			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7155" time="0" location="/home/vic/.ivy2/cache/org.apache.maven/maven-artifact/ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/2.0.8/maven-artifact-2.0.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="0.0.1"/>
@@ -865,7 +877,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
-			<revision name="2.7.0" status="release" pubdate="20160109214704" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="88">
+			<revision name="2.7.0" status="release" pubdate="20160109214704" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="90">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6763" time="0" location="/home/vic/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.7.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.7.0" rev-constraint-default="2.7.0" rev-constraint-dynamic="2.7.0" callerrev="0.0.1"/>
@@ -901,7 +913,7 @@
 			</revision>
 		</module>
 		<module organisation="javax.xml.stream" name="stax-api">
-			<revision name="1.0-2" status="release" pubdate="20081004105903" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
+			<revision name="1.0-2" status="release" pubdate="20081004105903" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="79">
 				<license name="GNU General Public Library" url="http://www.gnu.org/licenses/gpl.txt"/>
 				<license name="COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0" url="http://www.sun.com/cddl/cddl.html"/>
 				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/vic/.ivy2/cache/javax.xml.stream/stax-api/ivy-1.0-2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.pom"/>
@@ -913,32 +925,8 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.xerial.snappy" name="snappy-java">
-			<revision name="1.0.5" status="release" pubdate="20130516183557" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/xerial/snappy-java/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3994" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.5" rev-constraint-default="1.0.5" rev-constraint-dynamic="1.0.5" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="snappy-java" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="28089" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/srcs/snappy-java-1.0.5-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="commons-lang" name="commons-lang">
-			<revision name="2.6" status="release" pubdate="20110116142147" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6637" time="0" location="/home/vic/.ivy2/cache/commons-lang/commons-lang/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="commons-lang" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="372982" time="0" location="/home/vic/.ivy2/cache/commons-lang/commons-lang/srcs/commons-lang-2.6-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-security">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143729" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143729" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="9009" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-security/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-security/9.3.19.v20170502/jetty-security-9.3.19.v20170502.pom"/>
@@ -951,7 +939,7 @@
 			</revision>
 		</module>
 		<module organisation="com.sun.jersey" name="jersey-core">
-			<revision name="1.19" status="release" pubdate="20150211032427" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
+			<revision name="1.19" status="release" pubdate="20150211032427" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
 				<license name="CDDL 1.1" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<metadata-artifact status="no" details="" size="6362" time="0" location="/home/vic/.ivy2/cache/com.sun.jersey/jersey-core/ivy-1.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sun/jersey/jersey-core/1.19/jersey-core-1.19.pom"/>
@@ -964,7 +952,7 @@
 			</revision>
 		</module>
 		<module organisation="com.sun.jersey" name="jersey-server">
-			<revision name="1.19" status="release" pubdate="20150211032652" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+			<revision name="1.19" status="release" pubdate="20150211032652" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
 				<license name="CDDL 1.1" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<metadata-artifact status="no" details="" size="6643" time="0" location="/home/vic/.ivy2/cache/com.sun.jersey/jersey-server/ivy-1.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sun/jersey/jersey-server/1.19/jersey-server-1.19.pom"/>
@@ -977,7 +965,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.maven" name="maven-plugin-registry">
-			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+			<revision name="2.0.8" status="release" pubdate="20071126135820" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7241" time="0" location="/home/vic/.ivy2/cache/org.apache.maven/maven-plugin-registry/ivy-2.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-registry/2.0.8/maven-plugin-registry-2.0.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.0.8" rev-constraint-default="2.0.8" rev-constraint-dynamic="2.0.8" callerrev="0.0.1"/>
@@ -1000,7 +988,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-lang3">
-			<revision name="3.4" status="release" pubdate="20150403053112" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+			<revision name="3.4" status="release" pubdate="20150403053112" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="11673" time="0" location="/home/vic/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.4" callerrev="0.0.1"/>
@@ -1012,7 +1000,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-io" name="commons-io">
-			<revision name="2.4" status="release" pubdate="20120612152206" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
+			<revision name="2.4" status="release" pubdate="20120612152206" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="84">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8704" time="0" location="/home/vic/.ivy2/cache/commons-io/commons-io/ivy-2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="0.0.1"/>
@@ -1024,7 +1012,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-util">
-			<revision name="1.0.1" status="release" pubdate="20170830030944" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
+			<revision name="1.0.1" status="release" pubdate="20170830030944" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7222" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-util/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -1048,7 +1036,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-core">
-			<revision name="1.0.1" status="release" pubdate="20170830030821" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
+			<revision name="1.0.1" status="release" pubdate="20170830030821" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6816" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-core/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -1072,7 +1060,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-pkix">
-			<revision name="1.0.1" status="release" pubdate="20170830030741" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+			<revision name="1.0.1" status="release" pubdate="20170830030741" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6487" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-pkix/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -1084,7 +1072,7 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.25" status="release" pubdate="20170316093632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
+			<revision name="1.7.25" status="release" pubdate="20170316093632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="5199" time="0" location="/home/vic/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.0.1"/>
@@ -1108,7 +1096,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-asn1">
-			<revision name="1.0.1" status="release" pubdate="20170830030607" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
+			<revision name="1.0.1" status="release" pubdate="20170830030607" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6665" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-asn1/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.0.1"/>
@@ -1120,7 +1108,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.11.8" status="release" pubdate="20160304072633" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="16">
+			<revision name="2.11.8" status="release" pubdate="20160304072633" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="17">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/vic/.ivy2/cache/org.scala-lang/scala-library/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.0.1" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/"/>
@@ -1132,7 +1120,7 @@
 			</revision>
 		</module>
 		<module organisation="com.sun.jersey" name="jersey-servlet">
-			<revision name="1.19" status="release" pubdate="20150211033141" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+			<revision name="1.19" status="release" pubdate="20150211033141" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
 				<license name="CDDL 1.1" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<metadata-artifact status="no" details="" size="6795" time="0" location="/home/vic/.ivy2/cache/com.sun.jersey/jersey-servlet/ivy-1.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/sun/jersey/jersey-servlet/1.19/jersey-servlet-1.19.pom"/>
@@ -1145,7 +1133,7 @@
 			</revision>
 		</module>
 		<module organisation="javax.servlet.jsp" name="jsp-api">
-			<revision name="2.1" status="release" pubdate="20060717040956" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+			<revision name="2.1" status="release" pubdate="20060717040956" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
 				<metadata-artifact status="no" details="" size="2316" time="0" location="/home/vic/.ivy2/cache/javax.servlet.jsp/jsp-api/ivy-2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="0.0.1"/>
 				<artifacts>
@@ -1156,7 +1144,7 @@
 			</revision>
 		</module>
 		<module organisation="org.tukaani" name="xz">
-			<revision name="1.0" status="release" pubdate="20111022024446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tukaani.org/xz/java.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
+			<revision name="1.0" status="release" pubdate="20111022024446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tukaani.org/xz/java.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
 				<license name="Public Domain"/>
 				<metadata-artifact status="no" details="" size="2403" time="0" location="/home/vic/.ivy2/cache/org.tukaani/xz/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.0.1"/>
@@ -1168,7 +1156,7 @@
 			</revision>
 		</module>
 		<module organisation="javax.activation" name="activation">
-			<revision name="1.1" status="release" pubdate="20060502164829" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://java.sun.com/products/javabeans/jaf/index.jsp" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+			<revision name="1.1" status="release" pubdate="20060502164829" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://java.sun.com/products/javabeans/jaf/index.jsp" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
 				<license name="Common Development and Distribution License (CDDL) v1.0" url="https://glassfish.dev.java.net/public/CDDLv1.0.html"/>
 				<metadata-artifact status="no" details="" size="2844" time="0" location="/home/vic/.ivy2/cache/javax.activation/activation/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/activation/activation/1.1/activation-1.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="0.0.1"/>
@@ -1180,7 +1168,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
-			<revision name="2.7.8" status="release" pubdate="20160926074932" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+			<revision name="2.7.8" status="release" pubdate="20160926074932" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7216" time="0" location="/home/vic/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.7.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.7.8/jackson-core-2.7.8.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.7.8" rev-constraint-default="2.7.8" rev-constraint-dynamic="2.7.8" callerrev="0.0.1"/>
@@ -1192,7 +1180,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-server">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143657" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143657" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="9794" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-server/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-server/9.3.19.v20170502/jetty-server-9.3.19.v20170502.pom"/>
@@ -1205,7 +1193,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-xml">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143554" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143554" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="8943" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-xml/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-xml/9.3.19.v20170502/jetty-xml-9.3.19.v20170502.pom"/>
@@ -1218,7 +1206,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-io">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="8898" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-io/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-io/9.3.19.v20170502/jetty-io-9.3.19.v20170502.pom"/>
@@ -1231,7 +1219,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-http">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143357" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143357" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="8953" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-http/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-http/9.3.19.v20170502/jetty-http-9.3.19.v20170502.pom"/>
@@ -1244,7 +1232,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-util">
-			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143317" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
+			<revision name="9.3.19.v20170502" status="release" pubdate="20170502143317" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="106">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="9340" time="0" location="/home/vic/.ivy2/cache/org.eclipse.jetty/jetty-util/ivy-9.3.19.v20170502.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.3.19.v20170502/jetty-util-9.3.19.v20170502.pom"/>
@@ -1257,7 +1245,7 @@
 			</revision>
 		</module>
 		<module organisation="javax.servlet" name="javax.servlet-api">
-			<revision name="3.1.0" status="release" pubdate="20130425165239" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://servlet-spec.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="84">
+			<revision name="3.1.0" status="release" pubdate="20130425165239" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://servlet-spec.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
 				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
 				<metadata-artifact status="no" details="" size="4276" time="0" location="/home/vic/.ivy2/cache/javax.servlet/javax.servlet-api/ivy-3.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.1.0" rev-constraint-default="3.1.0" rev-constraint-dynamic="3.1.0" callerrev="0.0.1"/>
@@ -1269,7 +1257,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-logging" name="commons-logging">
-			<revision name="1.1.3" status="release" pubdate="20130516130523" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+			<revision name="1.1.3" status="release" pubdate="20130516130523" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="10350" time="0" location="/home/vic/.ivy2/cache/commons-logging/commons-logging/ivy-1.1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="0.0.1"/>
@@ -1280,20 +1268,8 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="log4j" name="log4j">
-			<revision name="1.2.17" status="release" pubdate="20120526024339" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logging.apache.org/log4j/1.2/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3670" time="0" location="/home/vic/.ivy2/cache/log4j/log4j/ivy-1.2.17.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.2.17" rev-constraint-default="1.2.17" rev-constraint-dynamic="1.2.17" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="log4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="481200" time="0" location="/home/vic/.ivy2/cache/log4j/log4j/srcs/log4j-1.2.17-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="javax.ws.rs" name="jsr311-api">
-			<revision name="1.1.1" status="release" pubdate="20091123154141" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://jsr311.dev.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+			<revision name="1.1.1" status="release" pubdate="20091123154141" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://jsr311.dev.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
 				<license name="                 CDDL License             " url="http://www.opensource.org/licenses/cddl1.php"/>
 				<metadata-artifact status="no" details="" size="2918" time="0" location="/home/vic/.ivy2/cache/javax.ws.rs/jsr311-api/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.0.1"/>
@@ -1305,7 +1281,7 @@
 			</revision>
 		</module>
 		<module organisation="org.codehaus.jackson" name="jackson-core-asl">
-			<revision name="1.9.13" status="release" pubdate="20130714200730" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+			<revision name="1.9.13" status="release" pubdate="20130714200730" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2564" time="0" location="/home/vic/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/ivy-1.9.13.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.9.13" rev-constraint-default="1.9.13" rev-constraint-dynamic="1.9.13" callerrev="0.0.1"/>
@@ -1317,13 +1293,145 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty">
-			<revision name="3.10.5.Final" status="release" pubdate="20151013031258" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+			<revision name="3.10.5.Final" status="release" pubdate="20151013031258" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="7197" time="0" location="/home/vic/.ivy2/cache/io.netty/netty/ivy-3.10.5.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.10.5.Final" rev-constraint-default="3.10.5.Final" rev-constraint-dynamic="3.10.5.Final" callerrev="0.0.1"/>
 				<artifacts>
 					<artifact name="netty" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1154000" time="0" location="/home/vic/.ivy2/cache/io.netty/netty/srcs/netty-3.10.5.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty/3.10.5.Final/netty-3.10.5.Final-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.code.findbugs" name="jsr305">
+			<revision name="3.0.0" status="release" pubdate="20140710045548" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2519" time="0" location="/home/vic/.ivy2/cache/com.google.code.findbugs/jsr305/ivy-3.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="jsr305" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="362" time="0" location="/home/vic/.ivy2/cache/com.google.code.findbugs/jsr305/srcs/jsr305-3.0.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.twelvemonkeys.common" name="common-lang">
+			<revision name="3.2.1" status="release" pubdate="20151211041310" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<metadata-artifact status="no" details="" size="4101" time="0" location="/home/vic/.ivy2/cache/com.twelvemonkeys.common/common-lang/ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-lang/3.2.1/common-lang-3.2.1.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.2.1" rev-constraint-default="3.2.1" rev-constraint-dynamic="3.2.1" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="common-lang" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="128867" time="0" location="/home/vic/.ivy2/cache/com.twelvemonkeys.common/common-lang/srcs/common-lang-3.2.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-lang/3.2.1/common-lang-3.2.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.httpcomponents" name="httpclient">
+			<revision name="4.5.2" status="release" pubdate="20160221080550" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-client" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="9802" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpclient/ivy-4.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="4.5.2" rev-constraint-default="4.5.2" rev-constraint-dynamic="4.5.2" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="httpclient" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="707899" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpclient/srcs/httpclient-4.5.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.httpcomponents" name="httpcore">
+			<revision name="4.4.4" status="release" pubdate="20151026101814" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-core-ga" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="7705" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpcore/ivy-4.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="4.4.4" rev-constraint-default="4.4.4" rev-constraint-dynamic="4.4.4" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="httpcore" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="405277" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpcore/srcs/httpcore-4.4.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-xc">
+			<revision name="1.9.2" status="release" pubdate="20111104194105" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<license name="GNU Lesser General Public License (LGPL), Version 2.1" url="http://www.fsf.org/licensing/licenses/lgpl.txt"/>
+				<metadata-artifact status="no" details="" size="3070" time="0" location="/home/vic/.ivy2/cache/org.codehaus.jackson/jackson-xc/ivy-1.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="jackson-xc" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="15829" time="0" location="/home/vic/.ivy2/cache/org.codehaus.jackson/jackson-xc/srcs/jackson-xc-1.9.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-beanutils" name="commons-beanutils">
+			<revision name="1.9.3" status="release" pubdate="20160921092132" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-beanutils/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="12135" time="0" location="/home/vic/.ivy2/cache/commons-beanutils/commons-beanutils/ivy-1.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.9.3" rev-constraint-default="1.9.3" rev-constraint-dynamic="1.9.3" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="commons-beanutils" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="314687" time="0" location="/home/vic/.ivy2/cache/commons-beanutils/commons-beanutils/srcs/commons-beanutils-1.9.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-collections" name="commons-collections">
+			<revision name="3.2.2" status="release" pubdate="20151112151126" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/collections/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="11113" time="0" location="/home/vic/.ivy2/cache/commons-collections/commons-collections/ivy-3.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="commons-collections" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="646075" time="0" location="/home/vic/.ivy2/cache/commons-collections/commons-collections/srcs/commons-collections-3.2.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.spark" name="spark-streaming-kafka-assembly_2.11">
+			<revision name="1.6.3" status="release" pubdate="20161102165355" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="75272" time="0" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-assembly_2.11/ivy-1.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-assembly_2.11/1.6.3/spark-streaming-kafka-assembly_2.11-1.6.3.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.6.3" rev-constraint-default="1.6.3" rev-constraint-dynamic="1.6.3" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="spark-streaming-kafka-assembly_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5417" time="0" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-assembly_2.11/srcs/spark-streaming-kafka-assembly_2.11-1.6.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-assembly_2.11/1.6.3/spark-streaming-kafka-assembly_2.11-1.6.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.spark-project.spark" name="unused">
+			<revision name="1.0.0" status="release" pubdate="20141022000005" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
+				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2975" time="0" location="/home/vic/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="unused" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="594" time="0" location="/home/vic/.ivy2/cache/org.spark-project.spark/unused/srcs/unused-1.0.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="log4j" name="log4j">
+			<revision name="1.2.17" status="release" pubdate="20120526024339" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logging.apache.org/log4j/1.2/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3670" time="0" location="/home/vic/.ivy2/cache/log4j/log4j/ivy-1.2.17.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.2.17" rev-constraint-default="1.2.17" rev-constraint-dynamic="1.2.17" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="log4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="481200" time="0" location="/home/vic/.ivy2/cache/log4j/log4j/srcs/log4j-1.2.17-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.jpountz.lz4" name="lz4">
+			<revision name="1.3.0" status="release" pubdate="20141126124014" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/jpountz/lz4-java" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2738" time="0" location="/home/vic/.ivy2/cache/net.jpountz.lz4/lz4/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.3.0" rev-constraint-default="1.3.0" rev-constraint-dynamic="1.3.0" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="lz4" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="50577" time="0" location="/home/vic/.ivy2/cache/net.jpountz.lz4/lz4/srcs/lz4-1.3.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -1340,92 +1448,20 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.google.code.findbugs" name="jsr305">
-			<revision name="3.0.0" status="release" pubdate="20140710045548" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+		<module organisation="commons-lang" name="commons-lang">
+			<revision name="2.6" status="release" pubdate="20110116142147" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2519" time="0" location="/home/vic/.ivy2/cache/com.google.code.findbugs/jsr305/ivy-3.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.0.1"/>
+				<metadata-artifact status="no" details="" size="6637" time="0" location="/home/vic/.ivy2/cache/commons-lang/commons-lang/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="0.0.1"/>
 				<artifacts>
-					<artifact name="jsr305" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="362" time="0" location="/home/vic/.ivy2/cache/com.google.code.findbugs/jsr305/srcs/jsr305-3.0.0-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.twelvemonkeys.common" name="common-lang">
-			<revision name="3.2.1" status="release" pubdate="20151211041310" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
-				<metadata-artifact status="no" details="" size="4101" time="0" location="/home/vic/.ivy2/cache/com.twelvemonkeys.common/common-lang/ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-lang/3.2.1/common-lang-3.2.1.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.2.1" rev-constraint-default="3.2.1" rev-constraint-dynamic="3.2.1" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="common-lang" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="128867" time="0" location="/home/vic/.ivy2/cache/com.twelvemonkeys.common/common-lang/srcs/common-lang-3.2.1-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twelvemonkeys/common/common-lang/3.2.1/common-lang-3.2.1-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.httpcomponents" name="httpclient">
-			<revision name="4.5.2" status="release" pubdate="20160221080550" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-client" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="9802" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpclient/ivy-4.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="4.5.2" rev-constraint-default="4.5.2" rev-constraint-dynamic="4.5.2" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="httpclient" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="707899" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpclient/srcs/httpclient-4.5.2-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.httpcomponents" name="httpcore">
-			<revision name="4.4.4" status="release" pubdate="20151026101814" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-core-ga" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7705" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpcore/ivy-4.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="4.4.4" rev-constraint-default="4.4.4" rev-constraint-dynamic="4.4.4" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="httpcore" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="405277" time="0" location="/home/vic/.ivy2/cache/org.apache.httpcomponents/httpcore/srcs/httpcore-4.4.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.codehaus.jackson" name="jackson-xc">
-			<revision name="1.9.2" status="release" pubdate="20111104194105" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<license name="GNU Lesser General Public License (LGPL), Version 2.1" url="http://www.fsf.org/licensing/licenses/lgpl.txt"/>
-				<metadata-artifact status="no" details="" size="3070" time="0" location="/home/vic/.ivy2/cache/org.codehaus.jackson/jackson-xc/ivy-1.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="jackson-xc" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="15829" time="0" location="/home/vic/.ivy2/cache/org.codehaus.jackson/jackson-xc/srcs/jackson-xc-1.9.2-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="commons-beanutils" name="commons-beanutils">
-			<revision name="1.9.3" status="release" pubdate="20160921092132" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-beanutils/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="0">
-				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="12135" time="0" location="/home/vic/.ivy2/cache/commons-beanutils/commons-beanutils/ivy-1.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="1.9.3" rev-constraint-default="1.9.3" rev-constraint-dynamic="1.9.3" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="commons-beanutils" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="314687" time="0" location="/home/vic/.ivy2/cache/commons-beanutils/commons-beanutils/srcs/commons-beanutils-1.9.3-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="commons-collections" name="commons-collections">
-			<revision name="3.2.2" status="release" pubdate="20151112151126" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/collections/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="11113" time="0" location="/home/vic/.ivy2/cache/commons-collections/commons-collections/ivy-3.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.pom"/>
-				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="0.0.1"/>
-				<artifacts>
-					<artifact name="commons-collections" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="646075" time="0" location="/home/vic/.ivy2/cache/commons-collections/commons-collections/srcs/commons-collections-3.2.2-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2-sources.jar"/>
+					<artifact name="commons-lang" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="372982" time="0" location="/home/vic/.ivy2/cache/commons-lang/commons-lang/srcs/commons-lang-2.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="junit" name="junit">
-			<revision name="3.8.1" status="release" pubdate="20070514143418" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="60">
+			<revision name="3.8.1" status="release" pubdate="20070514143418" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
 				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
 				<metadata-artifact status="no" details="" size="2583" time="0" location="/home/vic/.ivy2/cache/junit/junit/ivy-3.8.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl$sources" conf="compile, runtime" rev="3.8.1" rev-constraint-default="3.8.1" rev-constraint-dynamic="3.8.1" callerrev="0.0.1"/>

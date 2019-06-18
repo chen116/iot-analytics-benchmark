@@ -7,8 +7,65 @@
 		revision="0.0.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190611114613"/>
+		date="20190618100153"/>
 	<dependencies>
+		<module organisation="org.apache.kafka" name="kafka-clients">
+			<revision name="0.10.0.0" status="release" pubdate="20160517214431" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://kafka.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="123">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3276" time="0" location="/home/vic/.ivy2/cache/org.apache.kafka/kafka-clients/ivy-0.10.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.10.0.0/kafka-clients-0.10.0.0.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl_2.11" conf="compile, runtime" rev="0.10.0.0" rev-constraint-default="0.10.0.0" rev-constraint-dynamic="0.10.0.0" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="kafka-clients" type="jar" ext="jar" status="no" details="" size="743727" time="0" location="/home/vic/.ivy2/cache/org.apache.kafka/kafka-clients/jars/kafka-clients-0.10.0.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/0.10.0.0/kafka-clients-0.10.0.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.xerial.snappy" name="snappy-java">
+			<revision name="1.1.2.4" status="release" pubdate="20160330205008" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/xerial/snappy-java" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="125">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3450" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.1.2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.2.4/snappy-java-1.1.2.4.pom"/>
+				<caller organisation="org.apache.avro" name="avro" conf="compile, runtime" rev="1.0.5" rev-constraint-default="1.0.5" rev-constraint-dynamic="1.0.5" callerrev="1.7.7"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="default, compile, runtime, master" rev="1.1.2.4" rev-constraint-default="1.1.2.4" rev-constraint-dynamic="1.1.2.4" callerrev="0.10.0.0"/>
+				<artifacts>
+					<artifact name="snappy-java" type="bundle" ext="jar" status="no" details="" size="1056032" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.1.2.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.2.4/snappy-java-1.1.2.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.0.5" status="release" pubdate="20130516183557" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://github.com/xerial/snappy-java/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3994" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.pom"/>
+				<evicted-by rev="1.1.2.4"/>
+				<caller organisation="org.apache.avro" name="avro" conf="compile, runtime" rev="1.0.5" rev-constraint-default="1.0.5" rev-constraint-dynamic="1.0.5" callerrev="1.7.7"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.spark" name="spark-streaming-kafka-assembly_2.11">
+			<revision name="1.6.3" status="release" pubdate="20161102165355" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="122">
+				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="75272" time="0" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-assembly_2.11/ivy-1.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-assembly_2.11/1.6.3/spark-streaming-kafka-assembly_2.11-1.6.3.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl_2.11" conf="compile, runtime" rev="1.6.3" rev-constraint-default="1.6.3" rev-constraint-dynamic="1.6.3" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="spark-streaming-kafka-assembly_2.11" type="jar" ext="jar" status="no" details="" size="14377888" time="0" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-assembly_2.11/jars/spark-streaming-kafka-assembly_2.11-1.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-assembly_2.11/1.6.3/spark-streaming-kafka-assembly_2.11-1.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.jpountz.lz4" name="lz4">
+			<revision name="1.3.0" status="release" pubdate="20141126124014" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/jpountz/lz4-java" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="124">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2738" time="0" location="/home/vic/.ivy2/cache/net.jpountz.lz4/lz4/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="default, compile, runtime, master" rev="1.3.0" rev-constraint-default="1.3.0" rev-constraint-dynamic="1.3.0" callerrev="0.10.0.0"/>
+				<artifacts>
+					<artifact name="lz4" type="jar" ext="jar" status="no" details="" size="236880" time="0" location="/home/vic/.ivy2/cache/net.jpountz.lz4/lz4/jars/lz4-1.3.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-common">
 			<revision name="3.0.0" status="release" pubdate="20171208121519" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="39">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
@@ -22,7 +79,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.woodstox" name="woodstox-core">
-			<revision name="5.0.3" status="release" pubdate="20160823205912" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/woodstox" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="120">
+			<revision name="5.0.3" status="release" pubdate="20160823205912" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/woodstox" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="119">
 				<license name="The Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6398" time="0" location="/home/vic/.ivy2/cache/com.fasterxml.woodstox/woodstox-core/ivy-5.0.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/woodstox/woodstox-core/5.0.3/woodstox-core-5.0.3.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="5.0.3" rev-constraint-default="5.0.3" rev-constraint-dynamic="5.0.3" callerrev="3.0.0"/>
@@ -34,7 +91,7 @@
 			</revision>
 		</module>
 		<module organisation="org.codehaus.woodstox" name="stax2-api">
-			<revision name="3.1.4" status="release" pubdate="20140227222027" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/WoodstoxStax2" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="119">
+			<revision name="3.1.4" status="release" pubdate="20140227222027" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/WoodstoxStax2" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="118">
 				<license name="The BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="3477" time="0" location="/home/vic/.ivy2/cache/org.codehaus.woodstox/stax2-api/ivy-3.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="3.1.4" rev-constraint-default="3.1.4" rev-constraint-dynamic="3.1.4" callerrev="3.0.0"/>
@@ -47,7 +104,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
-			<revision name="2.7.8" status="release" pubdate="20160926075114" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
+			<revision name="2.7.8" status="release" pubdate="20160926075114" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="115">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7835" time="0" location="/home/vic/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.7.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.7.8/jackson-databind-2.7.8.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="2.7.8" rev-constraint-default="2.7.8" rev-constraint-dynamic="2.7.8" callerrev="3.0.0"/>
@@ -59,7 +116,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
-			<revision name="2.7.8" status="release" pubdate="20160926074932" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="118">
+			<revision name="2.7.8" status="release" pubdate="20160926074932" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="117">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7216" time="0" location="/home/vic/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.7.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.7.8/jackson-core-2.7.8.pom"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.7.8" rev-constraint-default="2.7.8" rev-constraint-dynamic="2.7.8" callerrev="2.7.8"/>
@@ -71,7 +128,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
-			<revision name="2.7.0" status="release" pubdate="20160109214704" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="117">
+			<revision name="2.7.0" status="release" pubdate="20160109214704" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6763" time="0" location="/home/vic/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.7.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.pom"/>
 				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.7.0" rev-constraint-default="2.7.0" rev-constraint-dynamic="2.7.0" callerrev="2.7.8"/>
@@ -83,7 +140,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.htrace" name="htrace-core4">
-			<revision name="4.1.0-incubating" status="release" pubdate="20160209164022" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://incubator.apache.org/projects/htrace.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="115">
+			<revision name="4.1.0-incubating" status="release" pubdate="20160209164022" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://incubator.apache.org/projects/htrace.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6769" time="0" location="/home/vic/.ivy2/cache/org.apache.htrace/htrace-core4/ivy-4.1.0-incubating.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="4.1.0-incubating" rev-constraint-default="4.1.0-incubating" rev-constraint-dynamic="4.1.0-incubating" callerrev="3.0.0"/>
@@ -95,7 +152,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.code.findbugs" name="jsr305">
-			<revision name="3.0.0" status="release" pubdate="20140710045548" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
+			<revision name="3.0.0" status="release" pubdate="20140710045548" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2519" time="0" location="/home/vic/.ivy2/cache/com.google.code.findbugs/jsr305/ivy-3.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="3.0.0"/>
@@ -116,7 +173,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.curator" name="curator-recipes">
-			<revision name="2.12.0" status="release" pubdate="20170228191744" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
+			<revision name="2.12.0" status="release" pubdate="20170228191744" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="112">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="13006" time="0" location="/home/vic/.ivy2/cache/org.apache.curator/curator-recipes/ivy-2.12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/curator/curator-recipes/2.12.0/curator-recipes-2.12.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="2.12.0" rev-constraint-default="2.12.0" rev-constraint-dynamic="2.12.0" callerrev="3.0.0"/>
@@ -128,7 +185,7 @@
 			</revision>
 		</module>
 		<module organisation="com.jcraft" name="jsch">
-			<revision name="0.1.54" status="release" pubdate="20160903024216" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="112">
+			<revision name="0.1.54" status="release" pubdate="20160903024216" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="111">
 				<license name="Revised BSD" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="3103" time="0" location="/home/vic/.ivy2/cache/com.jcraft/jsch/ivy-0.1.54.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.54/jsch-0.1.54.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="0.1.54" rev-constraint-default="0.1.54" rev-constraint-dynamic="0.1.54" callerrev="3.0.0"/>
@@ -140,7 +197,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.hadoop" name="hadoop-auth">
-			<revision name="3.0.0" status="release" pubdate="20171208121503" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
+			<revision name="3.0.0" status="release" pubdate="20171208121503" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="49660" time="0" location="/home/vic/.ivy2/cache/org.apache.hadoop/hadoop-auth/ivy-3.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-auth/3.0.0/hadoop-auth-3.0.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="3.0.0"/>
@@ -152,7 +209,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-simplekdc">
-			<revision name="1.0.1" status="release" pubdate="20170830031214" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
+			<revision name="1.0.1" status="release" pubdate="20170830031214" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6961" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-simplekdc/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-simplekdc/1.0.1/kerb-simplekdc-1.0.1.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="3.0.0"/>
@@ -165,7 +222,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-admin">
-			<revision name="1.0.1" status="release" pubdate="20170830031155" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
+			<revision name="1.0.1" status="release" pubdate="20170830031155" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7108" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-admin/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-admin/1.0.1/kerb-admin-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-simplekdc" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -177,7 +234,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-xdr">
-			<revision name="1.0.1" status="release" pubdate="20170830030714" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="111">
+			<revision name="1.0.1" status="release" pubdate="20170830030714" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6662" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-xdr/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-xdr/1.0.1/kerby-xdr-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-admin" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -189,7 +246,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-server">
-			<revision name="1.0.1" status="release" pubdate="20170830031132" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
+			<revision name="1.0.1" status="release" pubdate="20170830031132" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7078" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-server/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-server/1.0.1/kerb-server-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-admin" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -201,7 +258,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-identity">
-			<revision name="1.0.1" status="release" pubdate="20170830031003" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
+			<revision name="1.0.1" status="release" pubdate="20170830031003" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6963" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-identity/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-identity/1.0.1/kerb-identity-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-server" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -213,7 +270,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-client">
-			<revision name="1.0.1" status="release" pubdate="20170830031109" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
+			<revision name="1.0.1" status="release" pubdate="20170830031109" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7514" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-client/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-client/1.0.1/kerb-client-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-simplekdc" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -225,7 +282,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="token-provider">
-			<revision name="1.0.1" status="release" pubdate="20170830031046" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
+			<revision name="1.0.1" status="release" pubdate="20170830031046" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="106">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6966" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/token-provider/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/token-provider/1.0.1/token-provider-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-client" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -237,7 +294,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-util">
-			<revision name="1.0.1" status="release" pubdate="20170830030944" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="106">
+			<revision name="1.0.1" status="release" pubdate="20170830030944" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="105">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7222" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-util/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-util/1.0.1/kerb-util-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-admin" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -250,7 +307,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-common">
-			<revision name="1.0.1" status="release" pubdate="20170830030918" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
+			<revision name="1.0.1" status="release" pubdate="20170830030918" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7134" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-common/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-common/1.0.1/kerb-common-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-client" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -263,7 +320,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-crypto">
-			<revision name="1.0.1" status="release" pubdate="20170830030856" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="105">
+			<revision name="1.0.1" status="release" pubdate="20170830030856" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6964" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-crypto/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-crypto/1.0.1/kerb-crypto-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-common" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -276,7 +333,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerb-core">
-			<revision name="1.0.1" status="release" pubdate="20170830030821" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
+			<revision name="1.0.1" status="release" pubdate="20170830030821" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6816" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerb-core/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerb-core/1.0.1/kerb-core-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="token-provider" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -292,7 +349,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-pkix">
-			<revision name="1.0.1" status="release" pubdate="20170830030741" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
+			<revision name="1.0.1" status="release" pubdate="20170830030741" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6487" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-pkix/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-pkix/1.0.1/kerby-pkix-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-core" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -304,7 +361,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-util">
-			<revision name="1.0.1" status="release" pubdate="20170830030650" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
+			<revision name="1.0.1" status="release" pubdate="20170830030650" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6698" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-util/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-util/1.0.1/kerby-util-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-crypto" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -317,7 +374,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-asn1">
-			<revision name="1.0.1" status="release" pubdate="20170830030607" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
+			<revision name="1.0.1" status="release" pubdate="20170830030607" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6665" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-asn1/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-asn1/1.0.1/kerby-asn1-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerby-pkix" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -329,7 +386,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.kerby" name="kerby-config">
-			<revision name="1.0.1" status="release" pubdate="20170830030629" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
+			<revision name="1.0.1" status="release" pubdate="20170830030629" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6927" time="0" location="/home/vic/.ivy2/cache/org.apache.kerby/kerby-config/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kerby/kerby-config/1.0.1/kerby-config-1.0.1.pom"/>
 				<caller organisation="org.apache.kerby" name="kerb-identity" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
@@ -344,7 +401,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.curator" name="curator-framework">
-			<revision name="2.12.0" status="release" pubdate="20170228191727" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
+			<revision name="2.12.0" status="release" pubdate="20170228191727" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="12730" time="0" location="/home/vic/.ivy2/cache/org.apache.curator/curator-framework/ivy-2.12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/curator/curator-framework/2.12.0/curator-framework-2.12.0.pom"/>
 				<caller organisation="org.apache.curator" name="curator-recipes" conf="compile, runtime" rev="2.12.0" rev-constraint-default="2.12.0" rev-constraint-dynamic="2.12.0" callerrev="2.12.0"/>
@@ -357,7 +414,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.curator" name="curator-client">
-			<revision name="2.12.0" status="release" pubdate="20170228191710" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
+			<revision name="2.12.0" status="release" pubdate="20170228191710" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="13616" time="0" location="/home/vic/.ivy2/cache/org.apache.curator/curator-client/ivy-2.12.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/curator/curator-client/2.12.0/curator-client-2.12.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="2.12.0" rev-constraint-default="2.12.0" rev-constraint-dynamic="2.12.0" callerrev="3.0.0"/>
@@ -370,7 +427,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.zookeeper" name="zookeeper">
-			<revision name="3.4.9" status="release" pubdate="20160823015506" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
+			<revision name="3.4.9" status="release" pubdate="20160823015506" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4560" time="0" location="/home/vic/.ivy2/cache/org.apache.zookeeper/zookeeper/ivy-3.4.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.4.9/zookeeper-3.4.9.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="3.4.9" rev-constraint-default="3.4.9" rev-constraint-dynamic="3.4.9" callerrev="3.0.0"/>
@@ -390,7 +447,7 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty">
-			<revision name="3.10.5.Final" status="release" pubdate="20151013031258" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
+			<revision name="3.10.5.Final" status="release" pubdate="20151013031258" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="7197" time="0" location="/home/vic/.ivy2/cache/io.netty/netty/ivy-3.10.5.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.pom"/>
 				<caller organisation="org.apache.zookeeper" name="zookeeper" conf="compile, runtime" rev="3.10.5.Final" rev-constraint-default="3.10.5.Final" rev-constraint-dynamic="3.10.5.Final" callerrev="3.4.9"/>
@@ -402,7 +459,7 @@
 			</revision>
 		</module>
 		<module organisation="jline" name="jline">
-			<revision name="0.9.94" status="release" pubdate="20080222115343" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="122">
+			<revision name="0.9.94" status="release" pubdate="20080222115343" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jline.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="121">
 				<license name="BSD" url="LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="2968" time="0" location="/home/vic/.ivy2/cache/jline/jline/ivy-0.9.94.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/jline/jline/0.9.94/jline-0.9.94.pom"/>
 				<caller organisation="org.apache.zookeeper" name="zookeeper" conf="compile, runtime" rev="0.9.94" rev-constraint-default="0.9.94" rev-constraint-dynamic="0.9.94" callerrev="3.4.9"/>
@@ -414,7 +471,7 @@
 			</revision>
 		</module>
 		<module organisation="com.nimbusds" name="nimbus-jose-jwt">
-			<revision name="4.41.1" status="release" pubdate="20170810215745" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://bitbucket.org/connect2id/nimbus-jose-jwt" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="88">
+			<revision name="4.41.1" status="release" pubdate="20170810215745" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://bitbucket.org/connect2id/nimbus-jose-jwt" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4251" time="0" location="/home/vic/.ivy2/cache/com.nimbusds/nimbus-jose-jwt/ivy-4.41.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/nimbusds/nimbus-jose-jwt/4.41.1/nimbus-jose-jwt-4.41.1.pom"/>
 				<caller organisation="org.apache.kerby" name="token-provider" conf="compile, runtime" rev="3.10" rev-constraint-default="3.10" rev-constraint-dynamic="3.10" callerrev="1.0.1"/>
@@ -433,7 +490,7 @@
 			</revision>
 		</module>
 		<module organisation="net.minidev" name="json-smart">
-			<revision name="2.3" status="release" pubdate="20170326005657" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="90">
+			<revision name="2.3" status="release" pubdate="20170326005657" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="89">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4937" time="0" location="/home/vic/.ivy2/cache/net.minidev/json-smart/ivy-2.3.xml" searched="true" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/minidev/json-smart/2.3/json-smart-2.3.pom"/>
 				<caller organisation="com.nimbusds" name="nimbus-jose-jwt" conf="compile, runtime" rev="[1.3.1,2.3]" rev-constraint-default="[1.3.1,2.3]" rev-constraint-dynamic="[1.3.1,2.3]" callerrev="4.41.1"/>
@@ -445,7 +502,7 @@
 			</revision>
 		</module>
 		<module organisation="net.minidev" name="accessors-smart">
-			<revision name="1.2" status="release" pubdate="20170326005643" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="91">
+			<revision name="1.2" status="release" pubdate="20170326005643" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.minidev.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="90">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3480" time="0" location="/home/vic/.ivy2/cache/net.minidev/accessors-smart/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/minidev/accessors-smart/1.2/accessors-smart-1.2.pom"/>
 				<caller organisation="net.minidev" name="json-smart" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.3"/>
@@ -457,7 +514,7 @@
 			</revision>
 		</module>
 		<module organisation="org.ow2.asm" name="asm">
-			<revision name="5.0.4" status="release" pubdate="20150515080455" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
+			<revision name="5.0.4" status="release" pubdate="20150515080455" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="91">
 				<license name="BSD" url="http://asm.objectweb.org/license.html"/>
 				<metadata-artifact status="no" details="" size="3953" time="0" location="/home/vic/.ivy2/cache/org.ow2.asm/asm/ivy-5.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm/5.0.4/asm-5.0.4.pom"/>
 				<caller organisation="net.minidev" name="accessors-smart" conf="compile, runtime" rev="5.0.4" rev-constraint-default="5.0.4" rev-constraint-dynamic="5.0.4" callerrev="1.2"/>
@@ -469,7 +526,7 @@
 			</revision>
 		</module>
 		<module organisation="com.github.stephenc.jcip" name="jcip-annotations">
-			<revision name="1.0-1" status="release" pubdate="20130213025733" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://stephenc.github.com/jcip-annotations" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="89">
+			<revision name="1.0-1" status="release" pubdate="20130213025733" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://stephenc.github.com/jcip-annotations" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="88">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3388" time="0" location="/home/vic/.ivy2/cache/com.github.stephenc.jcip/jcip-annotations/ivy-1.0-1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.pom"/>
 				<caller organisation="com.nimbusds" name="nimbus-jose-jwt" conf="compile, runtime" rev="1.0-1" rev-constraint-default="1.0-1" rev-constraint-dynamic="1.0-1" callerrev="4.41.1"/>
@@ -481,7 +538,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.code.gson" name="gson">
-			<revision name="2.2.4" status="release" pubdate="20130513145652" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
+			<revision name="2.2.4" status="release" pubdate="20130513145652" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="85">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3381" time="0" location="/home/vic/.ivy2/cache/com.google.code.gson/gson/ivy-2.2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.2.4/gson-2.2.4.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="2.2.4" rev-constraint-default="2.2.4" rev-constraint-dynamic="2.2.4" callerrev="3.0.0"/>
@@ -493,7 +550,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.protobuf" name="protobuf-java">
-			<revision name="2.5.0" status="release" pubdate="20130307161811" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/protobuf" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="85">
+			<revision name="2.5.0" status="release" pubdate="20130307161811" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/protobuf" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="84">
 				<license name="New BSD license" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="3139" time="0" location="/home/vic/.ivy2/cache/com.google.protobuf/protobuf-java/ivy-2.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="3.0.0"/>
@@ -505,7 +562,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.re2j" name="re2j">
-			<revision name="1.1" status="release" pubdate="20151117065435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/google/re2j" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="84">
+			<revision name="1.1" status="release" pubdate="20151117065435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/google/re2j" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
 				<license name="The Go license" url="https://golang.org/LICENSE"/>
 				<metadata-artifact status="no" details="" size="3094" time="0" location="/home/vic/.ivy2/cache/com.google.re2j/re2j/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/re2j/re2j/1.1/re2j-1.1.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="3.0.0"/>
@@ -529,7 +586,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-compress">
-			<revision name="1.4.1" status="release" pubdate="20120521215732" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/compress/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
+			<revision name="1.4.1" status="release" pubdate="20120521215732" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/compress/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8141" time="0" location="/home/vic/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom"/>
 				<caller organisation="org.apache.avro" name="avro" conf="compile, runtime" rev="1.4.1" rev-constraint-default="1.4.1" rev-constraint-dynamic="1.4.1" callerrev="1.7.7"/>
@@ -542,25 +599,13 @@
 			</revision>
 		</module>
 		<module organisation="org.tukaani" name="xz">
-			<revision name="1.0" status="release" pubdate="20111022024446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tukaani.org/xz/java.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
+			<revision name="1.0" status="release" pubdate="20111022024446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tukaani.org/xz/java.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
 				<license name="Public Domain"/>
 				<metadata-artifact status="no" details="" size="2403" time="0" location="/home/vic/.ivy2/cache/org.tukaani/xz/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.pom"/>
 				<caller organisation="org.apache.commons" name="commons-compress" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.4.1"/>
 				<artifacts>
 					<artifact name="xz" type="jar" ext="jar" status="no" details="" size="94672" time="0" location="/home/vic/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.xerial.snappy" name="snappy-java">
-			<revision name="1.0.5" status="release" pubdate="20130516183557" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/xerial/snappy-java/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3994" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.pom"/>
-				<caller organisation="org.apache.avro" name="avro" conf="compile, runtime" rev="1.0.5" rev-constraint-default="1.0.5" rev-constraint-dynamic="1.0.5" callerrev="1.7.7"/>
-				<artifacts>
-					<artifact name="snappy-java" type="bundle" ext="jar" status="no" details="" size="1251514" time="0" location="/home/vic/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.0.5.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -664,6 +709,7 @@
 				<caller organisation="org.apache.hadoop" name="hadoop-auth" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="3.0.0"/>
 				<caller organisation="org.apache.curator" name="curator-client" conf="compile, runtime" rev="1.7.6" rev-constraint-default="1.7.6" rev-constraint-dynamic="1.7.6" callerrev="2.12.0"/>
 				<caller organisation="org.apache.kerby" name="kerby-pkix" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.0.1"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="default, compile, runtime, master" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="0.10.0.0"/>
 				<caller organisation="org.scalanlp" name="breeze_2.11" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="0.11.2"/>
 				<artifacts>
 					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="/home/vic/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar">
@@ -676,6 +722,12 @@
 				<metadata-artifact status="no" details="" size="4383" time="0" location="/home/vic/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom"/>
 				<evicted-by rev="1.7.25"/>
 				<caller organisation="org.scalanlp" name="breeze_2.11" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="0.11.2"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="1.7.21" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="1.7.25"/>
+				<caller organisation="org.apache.kafka" name="kafka-clients" conf="default, compile, runtime, master" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="0.10.0.0"/>
 				<artifacts>
 				</artifacts>
 			</revision>
@@ -932,7 +984,7 @@
 			</revision>
 		</module>
 		<module organisation="javax.servlet.jsp" name="jsp-api">
-			<revision name="2.1" status="release" pubdate="20060717040956" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="121">
+			<revision name="2.1" status="release" pubdate="20060717040956" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="120">
 				<metadata-artifact status="no" details="" size="2316" time="0" location="/home/vic/.ivy2/cache/javax.servlet.jsp/jsp-api/ivy-2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.pom"/>
 				<caller organisation="org.apache.hadoop" name="hadoop-common" conf="default, compile, runtime, master" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="3.0.0"/>
 				<artifacts>
@@ -1206,12 +1258,12 @@
 			</revision>
 		</module>
 		<module organisation="com.intel.analytics.bigdl" name="bigdl-SPARK_2.4">
-			<revision name="0.8.0" status="release" pubdate="20190327201017" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+			<revision name="0.8.0" status="release" pubdate="20190327201017" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="21722" time="108" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl/bigdl-SPARK_2.4/ivy-0.8.0.xml" searched="true" original-local-location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl/bigdl-SPARK_2.4/ivy-0.8.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/bigdl-SPARK_2.4/0.8.0/bigdl-SPARK_2.4-0.8.0.pom"/>
+				<metadata-artifact status="no" details="" size="24746" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl/bigdl-SPARK_2.4/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/bigdl-SPARK_2.4/0.8.0/bigdl-SPARK_2.4-0.8.0.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl_2.11" conf="compile, runtime" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.0.1"/>
 				<artifacts>
-					<artifact name="bigdl-SPARK_2.4" type="jar" ext="jar" status="successful" details="" size="16635873" time="8117" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl/bigdl-SPARK_2.4/jars/bigdl-SPARK_2.4-0.8.0.jar">
+					<artifact name="bigdl-SPARK_2.4" type="jar" ext="jar" status="no" details="" size="16635873" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl/bigdl-SPARK_2.4/jars/bigdl-SPARK_2.4-0.8.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/bigdl-SPARK_2.4/0.8.0/bigdl-SPARK_2.4-0.8.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -1383,12 +1435,12 @@
 			</revision>
 		</module>
 		<module organisation="com.intel.analytics.bigdl.spark-version" name="2.0-SPARK_2.4">
-			<revision name="0.8.0" status="release" pubdate="20190327200510" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+			<revision name="0.8.0" status="release" pubdate="20190327200510" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="10249" time="78" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.spark-version/2.0-SPARK_2.4/ivy-0.8.0.xml" searched="true" original-local-location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.spark-version/2.0-SPARK_2.4/ivy-0.8.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/spark-version/2.0-SPARK_2.4/0.8.0/2.0-SPARK_2.4-0.8.0.pom"/>
+				<metadata-artifact status="no" details="" size="21825" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.spark-version/2.0-SPARK_2.4/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/spark-version/2.0-SPARK_2.4/0.8.0/2.0-SPARK_2.4-0.8.0.pom"/>
 				<caller organisation="com.intel.analytics.bigdl" name="bigdl-SPARK_2.4" conf="default, compile, runtime, master" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.8.0"/>
 				<artifacts>
-					<artifact name="2.0-SPARK_2.4" type="jar" ext="jar" status="successful" details="" size="50757" time="279" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.spark-version/2.0-SPARK_2.4/jars/2.0-SPARK_2.4-0.8.0.jar">
+					<artifact name="2.0-SPARK_2.4" type="jar" ext="jar" status="no" details="" size="50757" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.spark-version/2.0-SPARK_2.4/jars/2.0-SPARK_2.4-0.8.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/spark-version/2.0-SPARK_2.4/0.8.0/2.0-SPARK_2.4-0.8.0.jar"/>
 					</artifact>
 				</artifacts>
@@ -1400,6 +1452,7 @@
 				<metadata-artifact status="no" details="" size="2975" time="0" location="/home/vic/.ivy2/cache/org.spark-project.spark/unused/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.pom"/>
 				<caller organisation="com.intel.analytics.bigdl" name="bigdl-SPARK_2.4" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.8.0"/>
 				<caller organisation="com.intel.analytics.bigdl.spark-version" name="2.0-SPARK_2.4" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.8.0"/>
+				<caller organisation="org.apache.spark" name="spark-streaming-kafka-assembly_2.11" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.6.3"/>
 				<artifacts>
 					<artifact name="unused" type="jar" ext="jar" status="no" details="" size="2777" time="0" location="/home/vic/.ivy2/cache/org.spark-project.spark/unused/jars/unused-1.0.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar"/>
@@ -1408,12 +1461,12 @@
 			</revision>
 		</module>
 		<module organisation="com.intel.analytics.bigdl.core.dist" name="all">
-			<revision name="0.8.0" status="release" pubdate="20190326222158" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+			<revision name="0.8.0" status="release" pubdate="20190326222158" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="6106" time="80" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.core.dist/all/ivy-0.8.0.xml" searched="true" original-local-location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.core.dist/all/ivy-0.8.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/core/dist/all/0.8.0/all-0.8.0.pom"/>
+				<metadata-artifact status="no" details="" size="3472" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.core.dist/all/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/core/dist/all/0.8.0/all-0.8.0.pom"/>
 				<caller organisation="com.intel.analytics.bigdl" name="bigdl-SPARK_2.4" conf="default, compile, runtime, master" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.8.0"/>
 				<artifacts>
-					<artifact name="all" type="jar" ext="jar" status="successful" details="" size="60630396" time="10146" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.core.dist/all/jars/all-0.8.0.jar">
+					<artifact name="all" type="jar" ext="jar" status="no" details="" size="60630396" time="0" location="/home/vic/.ivy2/cache/com.intel.analytics.bigdl.core.dist/all/jars/all-0.8.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/intel/analytics/bigdl/core/dist/all/0.8.0/all-0.8.0.jar"/>
 					</artifact>
 				</artifacts>

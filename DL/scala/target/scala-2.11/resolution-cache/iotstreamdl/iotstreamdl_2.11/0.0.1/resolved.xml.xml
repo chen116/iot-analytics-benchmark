@@ -4,7 +4,7 @@
 		module="iotstreamdl_2.11"
 		revision="0.0.1"
 		status="integration"
-		publication="20190611114613"
+		publication="20190618100153"
 	>
 		<description>
 		iotstreamdl
@@ -37,5 +37,8 @@
 		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.4.3" conf="provided->default(compile)"/>
 		<dependency org="com.intel.analytics.bigdl" name="bigdl-SPARK_2.4" rev="0.8.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.hadoop" name="hadoop-common" rev="3.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-streaming-kafka-0-8_2.11" rev="2.4.3" conf="provided->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-streaming-kafka-assembly_2.11" rev="1.6.3" conf="compile->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka-clients" rev="0.10.0.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
