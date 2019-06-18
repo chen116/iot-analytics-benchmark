@@ -165,6 +165,7 @@ object infer_cifar_stream_kafka {
       def run_model(rdd: RDD[String]): Unit = {
         // Input rdds consist of batches of labeled images encoded as strings
         // Skip empty intervals and stop on first empty interval after start
+        sendAsync("inside run_model")
         if (rdd.count == 0) {
           empty_intervals.add(1)
           println("%s: No input".format(Instant.now.toString))

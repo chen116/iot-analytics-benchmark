@@ -135,7 +135,7 @@ object send_images_cifar_stream_kafka {
 
     parser.parse(args, Params()).foreach { param =>
 
-      System.err.println("Will send " + param.imagesPerSec + " images per second for a total of " + param.totalImages + " images")
+      System.err.println("Will send to kafka" + param.imagesPerSec + " images per second for a total of " + param.totalImages + " images")
 
       //  First, write labeled test images to an array
       val image_string_array = new Array[String](10000)
