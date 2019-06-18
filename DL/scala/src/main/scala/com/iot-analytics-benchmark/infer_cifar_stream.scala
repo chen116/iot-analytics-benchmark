@@ -42,28 +42,28 @@ import org.apache.spark.streaming._
 import scopt.OptionParser
 import java.time._
 
-object SampleToImagefeature {
-  def apply(): SampleToImagefeature = {
-    new SampleToImagefeature()
-  }
-}
-
-class SampleToImagefeature() extends Transformer[Sample[Float], ImageFeature] {
-
-  override def apply(prev: Iterator[Sample[Float]]): Iterator[ImageFeature] = {
-    prev.map(img => {
-      val imageFeature = new ImageFeature()
-      val featureBuffer = Tensor[Float]()
-      val labelBuffer = Tensor[Float]()
-
-      featureBuffer.resizeAs(img.feature()).copy(img.feature())
-      labelBuffer.resizeAs(img.label()).copy(img.label())
-      imageFeature.update("sample", Sample(featureBuffer, labelBuffer))
-      imageFeature.update("label", labelBuffer)
-      imageFeature
-    })
-  }
-}
+//object SampleToImagefeature {
+//  def apply(): SampleToImagefeature = {
+//    new SampleToImagefeature()
+//  }
+//}
+//
+//class SampleToImagefeature() extends Transformer[Sample[Float], ImageFeature] {
+//
+//  override def apply(prev: Iterator[Sample[Float]]): Iterator[ImageFeature] = {
+//    prev.map(img => {
+//      val imageFeature = new ImageFeature()
+//      val featureBuffer = Tensor[Float]()
+//      val labelBuffer = Tensor[Float]()
+//
+//      featureBuffer.resizeAs(img.feature()).copy(img.feature())
+//      labelBuffer.resizeAs(img.label()).copy(img.label())
+//      imageFeature.update("sample", Sample(featureBuffer, labelBuffer))
+//      imageFeature.update("label", labelBuffer)
+//      imageFeature
+//    })
+//  }
+//}
 
 object infer_cifar_stream {
 
