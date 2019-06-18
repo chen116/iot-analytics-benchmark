@@ -7,27 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd3f9930-f0de-42a2-9da0-55d4bdf88648" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/.idea/modules/iotstreamdl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/.idea/modules/iotstreamdl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/iotstreamdl/iotstreamdl$sources/0.0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/iotstreamdl/iotstreamdl$sources/0.0.1/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/iotstreamdl/iotstreamdl$sources/0.0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/iotstreamdl/iotstreamdl$sources/0.0.1/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/resolution-cache/reports/iotstreamdl-iotstreamdl$sources-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/update/$global/streams/update_cache_2.11/output" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/send_images_cifar_stream_kafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/send_images_cifar_stream_kafka.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -76,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/iotstream_lr_kafka_in_out.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="386">
@@ -84,6 +65,18 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#1155#1192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/sim_sensors_lr_kafka.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+              <folding>
+                <element signature="e#969#996#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,7 +185,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560882524519" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560882981883" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -268,7 +261,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1329" y="336" width="1551" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20730896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -336,6 +328,16 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#1155#1192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/sim_sensors_lr_kafka.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="e#969#996#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -28,7 +28,13 @@ import java.nio.ByteBuffer
 import java.nio.file.{Files, Path, Paths}
 import java.time.Instant
 import java.util.Random
+
 import scopt.OptionParser
+import java.util.Properties
+
+import org.apache.kafka.clients.producer.{Callback, KafkaProducer, ProducerRecord, RecordMetadata}
+
+import scala.concurrent.Promise
 
 object send_images_cifar_stream_kafka {
 
@@ -91,6 +97,24 @@ object send_images_cifar_stream_kafka {
 
   def main(args: Array[String]) {
 
+    // kafka out
+    val props = new Properties()
+    props.put("bootstrap.servers", "hpc0990:9092")
+    props.put("client.id", "viccc")
+    props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    val kaf_producer = new KafkaProducer[String,String](props)
+    def sendAsync(value: String):Unit = {
+      val record = new ProducerRecord[String, String]("meow", value)
+      val p = Promise[(RecordMetadata, Exception)]()
+      kaf_producer.send(record, new Callback {
+        override def onCompletion(metadata: RecordMetadata, exception: Exception): Unit = {
+          p.success((metadata, exception))
+        }
+      })
+    }
+
+
     case class Params(
                        folder: String = "cifar-10-batches-bin",
                        imagesPerSec: Int  = 10,
@@ -138,6 +162,7 @@ object send_images_cifar_stream_kafka {
       System.err.println(Instant.now() + ": Sending images")
       for (i <- 0 to param.totalImages-1) {
         println(image_string_array(i % image_string_array.length))
+        sendAsync(image_string_array(i % image_string_array.length))
         System.out.flush()
         if ((i+1) % param.imagesPerSec == 0 ) System.err.println(Instant.now() + ": " + (i+1) + " images sent")
         // Wait a random time from lognormal distribution with mean mean_wait
@@ -145,7 +170,8 @@ object send_images_cifar_stream_kafka {
       }
 
       val t2 = System.nanoTime
-
+      def close():Unit = kaf_producer.close()
+      close()
       System.err.println(Instant.now() + ": Sent " + param.totalImages + " images in " + "%.1f".format((t2-t1)/1000000000.0) + " seconds")
     }
   }

@@ -44,7 +44,6 @@ import java.time._
 
 import org.apache.spark.streaming.kafka._
 import java.util.Properties
-//import kafka.serializer.StringDecoder
 import org.apache.kafka.clients.producer.{Callback, KafkaProducer, ProducerRecord, RecordMetadata}
 import _root_.kafka.serializer.StringDecoder
 
@@ -77,7 +76,7 @@ object infer_cifar_stream_kafka {
 
   def main(args: Array[String]) {
 
-
+    // kafka out
     val props = new Properties()
     props.put("bootstrap.servers", "hpc0990:9092")
     props.put("client.id", "viccc")
@@ -152,7 +151,7 @@ object infer_cifar_stream_kafka {
       val topicsSet = List(topic).toSet
       val kafkaParams = Map[String, String]("bootstrap.servers" -> "hpc0990:9092")
       val image_stream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topicsSet)
-      // Load pre-computed model
+      // end kafka stream in
 
       // Parse individual labeled image string into a ByteRecord consisting of the image data and label
       def parse_labeled_image_string(labeled_image_string: String): ByteRecord = {
@@ -207,7 +206,7 @@ object infer_cifar_stream_kafka {
       }
 
       // Run model on each batch
-//      .foreachRDD(run_model(_))
+//      image_stream.foreachRDD(run_model(_))
       image_stream.map(_._2).foreachRDD(run_model(_))
 
       // Start reading streaming data
