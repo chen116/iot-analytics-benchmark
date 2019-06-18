@@ -4,7 +4,7 @@
 		module="iotstreamdl$sources"
 		revision="0.0.1"
 		status="integration"
-		publication="20190618100202"
+		publication="20190618111129"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

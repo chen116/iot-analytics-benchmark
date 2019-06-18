@@ -32,10 +32,10 @@ import com.intel.analytics.bigdl.nn.Module
 import com.intel.analytics.bigdl.utils.Engine
 import com.intel.analytics.bigdl.models.resnet.Utils._
 import com.intel.analytics.bigdl.dataset.image.{BGRImgNormalizer, BGRImgToSample, BytesToBGRImg}
-import com.intel.analytics.bigdl.dataset.{ByteRecord, Transformer, Sample}
-import com.intel.analytics.bigdl.transform.vision.image.{ImageFeature,ImageFrame}
+import com.intel.analytics.bigdl.dataset.{ByteRecord, Sample, Transformer}
+import com.intel.analytics.bigdl.transform.vision.image.{ImageFeature, ImageFrame}
 import com.intel.analytics.bigdl.tensor.Tensor
-import com.intel.analytics.bigdl.optim.{Top1Accuracy}
+import com.intel.analytics.bigdl.optim.Top1Accuracy
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming._
@@ -44,7 +44,10 @@ import java.time._
 
 import org.apache.spark.streaming.kafka._
 import java.util.Properties
-import org.apache.kafka.clients.producer.{Callback, RecordMetadata, ProducerRecord, KafkaProducer}
+//import kafka.serializer.StringDecoder
+import org.apache.kafka.clients.producer.{Callback, KafkaProducer, ProducerRecord, RecordMetadata}
+import _root_.kafka.serializer.StringDecoder
+
 import scala.concurrent.Promise
 
 //object SampleToImagefeature {
@@ -137,8 +140,19 @@ object infer_cifar_stream_kafka {
       val partitionNum = Engine.nodeNumber() * Engine.coreNumber()
 
       // Initialize StreamingContext, have it read TextStream through socket
-      val ssc = new StreamingContext(sc, Seconds(param.reportingInterval))
-      val image_stream = ssc.socketTextStream(param.sourceIPAddress, param.sourcePort)
+//      val ssc = new StreamingContext(sc, Seconds(param.reportingInterval))
+//      val image_stream = ssc.socketTextStream(param.sourceIPAddress, param.sourcePort)
+
+
+
+      //kafka stream in
+      val reporting_interval = 5
+      val topic = "meow"
+      val ssc = new StreamingContext(sc, Seconds(reporting_interval))
+      val topicsSet = List(topic).toSet
+      val kafkaParams = Map[String, String]("bootstrap.servers" -> "hpc0990:9092")
+      val image_stream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topicsSet)
+      // Load pre-computed model
 
       // Parse individual labeled image string into a ByteRecord consisting of the image data and label
       def parse_labeled_image_string(labeled_image_string: String): ByteRecord = {
@@ -193,7 +207,8 @@ object infer_cifar_stream_kafka {
       }
 
       // Run model on each batch
-      image_stream.foreachRDD(run_model(_))
+//      .foreachRDD(run_model(_))
+      image_stream.map(_._2).foreachRDD(run_model(_))
 
       // Start reading streaming data
       ssc.start()
