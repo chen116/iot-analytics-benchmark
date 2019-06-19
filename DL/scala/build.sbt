@@ -16,6 +16,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-streaming-kafka-0-8" % sparkVersion % "provided",
   "org.apache.spark" %% "spark-streaming-kafka-assembly" % "1.6.3",
   "org.apache.kafka" % "kafka-clients" % "0.10.0.0",
+  "org.eclipse.paho" % "org.eclipse.paho.client.mqttv3" % "1.2.0",
 )
 assemblyMergeStrategy in assembly := {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard

@@ -4,7 +4,7 @@
 		module="iotstreamdl_2.11"
 		revision="0.0.1"
 		status="integration"
-		publication="20190618100153"
+		publication="20190619045257"
 	>
 		<description>
 		iotstreamdl
@@ -40,5 +40,6 @@
 		<dependency org="org.apache.spark" name="spark-streaming-kafka-0-8_2.11" rev="2.4.3" conf="provided->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-streaming-kafka-assembly_2.11" rev="1.6.3" conf="compile->default(compile)"/>
 		<dependency org="org.apache.kafka" name="kafka-clients" rev="0.10.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.eclipse.paho" name="org.eclipse.paho.client.mqttv3" rev="1.2.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

@@ -7,15 +7,15 @@
 		revision="0.0.1"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190618100153"/>
+		date="20190619045257"/>
 	<dependencies>
 		<module organisation="org.apache.spark" name="spark-streaming-kafka-0-8_2.11">
-			<revision name="2.4.3" status="release" pubdate="20190501005649" resolver="public" artresolver="public" homepage="http://spark.apache.org/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="173">
+			<revision name="2.4.3" status="release" pubdate="20190501005649" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="173">
 				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="11032" time="78" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-0-8_2.11/ivy-2.4.3.xml" searched="true" original-local-location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-0-8_2.11/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8_2.11/2.4.3/spark-streaming-kafka-0-8_2.11-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="85435" time="0" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-0-8_2.11/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8_2.11/2.4.3/spark-streaming-kafka-0-8_2.11-2.4.3.pom"/>
 				<caller organisation="iotstreamdl" name="iotstreamdl_2.11" conf="provided" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="0.0.1"/>
 				<artifacts>
-					<artifact name="spark-streaming-kafka-0-8_2.11" type="jar" ext="jar" status="successful" details="" size="302964" time="252" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-0-8_2.11/jars/spark-streaming-kafka-0-8_2.11-2.4.3.jar">
+					<artifact name="spark-streaming-kafka-0-8_2.11" type="jar" ext="jar" status="no" details="" size="302964" time="0" location="/home/vic/.ivy2/cache/org.apache.spark/spark-streaming-kafka-0-8_2.11/jars/spark-streaming-kafka-0-8_2.11-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8_2.11/2.4.3/spark-streaming-kafka-0-8_2.11-2.4.3.jar"/>
 					</artifact>
 				</artifacts>

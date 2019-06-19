@@ -7,8 +7,20 @@
 		revision="0.0.1"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190618100153"/>
+		date="20190619045257"/>
 	<dependencies>
+		<module organisation="org.eclipse.paho" name="org.eclipse.paho.client.mqttv3">
+			<revision name="1.2.0" status="release" pubdate="20170814053747" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="126">
+				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
+				<metadata-artifact status="successful" details="" size="3507" time="93" location="/home/vic/.ivy2/cache/org.eclipse.paho/org.eclipse.paho.client.mqttv3/ivy-1.2.0.xml" searched="true" original-local-location="/home/vic/.ivy2/cache/org.eclipse.paho/org.eclipse.paho.client.mqttv3/ivy-1.2.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/paho/org.eclipse.paho.client.mqttv3/1.2.0/org.eclipse.paho.client.mqttv3-1.2.0.pom"/>
+				<caller organisation="iotstreamdl" name="iotstreamdl_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="0.0.1"/>
+				<artifacts>
+					<artifact name="org.eclipse.paho.client.mqttv3" type="eclipse-plugin" ext="jar" status="successful" details="" size="217453" time="361" location="/home/vic/.ivy2/cache/org.eclipse.paho/org.eclipse.paho.client.mqttv3/eclipse-plugins/org.eclipse.paho.client.mqttv3-1.2.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/paho/org.eclipse.paho.client.mqttv3/1.2.0/org.eclipse.paho.client.mqttv3-1.2.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.apache.kafka" name="kafka-clients">
 			<revision name="0.10.0.0" status="release" pubdate="20160517214431" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://kafka.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="123">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>

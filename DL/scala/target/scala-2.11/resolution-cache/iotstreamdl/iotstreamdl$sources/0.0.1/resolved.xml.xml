@@ -4,7 +4,7 @@
 		module="iotstreamdl$sources"
 		revision="0.0.1"
 		status="integration"
-		publication="20190618111129"
+		publication="20190619045304"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -696,6 +696,10 @@
 		</dependency>
 		<dependency org="org.apache.orc" name="orc-core" rev="1.5.5" transitive="false" conf="provided->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
 			<artifact name="orc-core" type="src" ext="jar" conf="*" e:classifier="sources"/>
+			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.eclipse.paho" name="org.eclipse.paho.client.mqttv3" rev="1.2.0" transitive="false" conf="compile->default,compile,runtime,default(compile),master;runtime->default,compile,runtime,default(compile),master;test->default,compile,runtime,default(compile),master;compile-internal->default,compile,runtime,default(compile),master;runtime-internal->default,compile,runtime,default(compile),master;test-internal->default,compile,runtime,default(compile),master">
+			<artifact name="org.eclipse.paho.client.mqttv3" type="src" ext="jar" conf="*" e:classifier="sources"/>
 			<include name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
 		<dependency org="org.apache.spark" name="spark-mllib-local_2.11" rev="2.4.3" transitive="false" conf="provided->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
