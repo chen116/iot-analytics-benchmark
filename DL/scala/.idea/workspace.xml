@@ -7,7 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b51903da-3d17-4641-95fb-b435daaf0022" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$$anonfun$apply$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$9$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$9$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$apply$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$apply$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ML/scala/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ML/scala/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-800">
+            <state relative-caret-position="-530">
               <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -42,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/send_images_cifar_stream.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1341">
+            <state relative-caret-position="255">
               <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -52,24 +68,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="221" column="39" lean-forward="true" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
+            <state relative-caret-position="330">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="e#1692#1734#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/send_images_cifar_stream_kafka.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
-              <caret line="143" column="44" lean-forward="true" selection-start-line="143" selection-start-column="44" selection-end-line="143" selection-end-column="44" />
+            <state relative-caret-position="355">
+              <caret line="163" column="58" selection-start-line="163" selection-start-column="58" selection-end-line="163" selection-end-column="58" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#1413#1456#0" expanded="true" />
@@ -81,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="330">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -169,7 +184,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560893643131" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560920131791" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark" />
     <property name="last_opened_file_path" value="$USER_HOME$/hpc" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -284,36 +299,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-800">
-          <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1693#1735#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="221" column="39" lean-forward="true" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1692#1734#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/send_images_cifar_stream.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1341">
+        <state relative-caret-position="255">
           <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -324,11 +317,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/send_images_cifar_stream_kafka.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="143" column="44" lean-forward="true" selection-start-line="143" selection-start-column="44" selection-end-line="143" selection-end-column="44" />
+        <state relative-caret-position="355">
+          <caret line="163" column="58" selection-start-line="163" selection-start-column="58" selection-end-line="163" selection-end-column="58" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#1413#1456#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-530">
+          <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1693#1735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#1692#1734#0" expanded="true" />
           </folding>
         </state>
       </provider>
