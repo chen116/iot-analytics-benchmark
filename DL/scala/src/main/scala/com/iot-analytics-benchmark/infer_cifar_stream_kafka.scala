@@ -159,7 +159,7 @@ object infer_cifar_stream_kafka {
         val label_string = labeled_image_string.substring(0, idx)
         val data_string = labeled_image_string.substring(idx+1)
         val image_data_array = data_string.split(",").map(_.toByte)
-        ByteRecord(image_data_array, label_string.toFloat+127)
+        ByteRecord(image_data_array, label_string.toFloat)
       }
 
       def run_model(rdd: RDD[String]): Unit = {

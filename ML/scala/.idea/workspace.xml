@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd3f9930-f0de-42a2-9da0-55d4bdf88648" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../DL/scala/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -188,7 +189,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560941948164" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560943265393" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
