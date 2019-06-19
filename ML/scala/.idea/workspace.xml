@@ -8,23 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd3f9930-f0de-42a2-9da0-55d4bdf88648" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../DL/scala/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/src/main/scala/com/iot-analytics-benchmark/infer_cifar_stream_kafka.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/SampleToImagefeature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$9$$anonfun$apply$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1$$anonfun$apply$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream$$anonfun$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$9$$anonfun$apply$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$apply$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$apply$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1$$anonfun$apply$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$$anonfun$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../DL/scala/target/scala-2.11/classes/com/intel/analytics/bigdl/models/resnet/infer_cifar_stream_kafka$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -72,7 +55,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/iotstream_lr_kafka.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-625">
+            <state relative-caret-position="75">
               <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -135,9 +118,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1329" />
-    <option name="y" value="336" />
-    <option name="width" value="1551" />
-    <option name="height" value="875" />
+    <option name="y" value="345" />
+    <option name="width" value="1391" />
+    <option name="height" value="785" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,7 +188,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560920131821" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560941948164" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -280,10 +263,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1329" y="336" width="1551" height="875" extended-state="6" />
+    <frame x="1329" y="345" width="1391" height="785" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20730896" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23197027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -361,7 +344,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/iot-analytics-benchmark/iotstream_lr_kafka.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
+        <state relative-caret-position="75">
           <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding>
             <element signature="n#!!doc" expanded="true" />

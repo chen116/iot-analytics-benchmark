@@ -155,10 +155,10 @@ object infer_cifar_stream_kafka {
 
       // Parse individual labeled image string into a ByteRecord consisting of the image data and label
       def parse_labeled_image_string(labeled_image_string: String): ByteRecord = {
-        val idx = labeled_image_string.indexOf(" ")
+        val idx = labeled_image_string.indexOf(",")
         val label_string = labeled_image_string.substring(0, idx)
         val data_string = labeled_image_string.substring(idx+1)
-        val image_data_array = data_string.split(" ").map(_.toByte)
+        val image_data_array = data_string.split(",").map(_.toByte)
         ByteRecord(image_data_array, label_string.toFloat+127)
       }
 
