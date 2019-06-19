@@ -110,7 +110,9 @@ object send_images_cifar_stream_mqtt {
                        folder: String = "cifar-10-batches-bin",
                        imagesPerSec: Int  = 10,
                        totalImages: Int = 100,
-                       dir: String = "$tmp"
+                       dir: String = "$tmp",
+                       mqttdest: String = "kafkaSource",
+                       mqttserver: String = "hpc0982"
                      )
 
     val parser = new OptionParser[Params]("send_images_cifar") {
@@ -126,6 +128,12 @@ object send_images_cifar_stream_mqtt {
       opt[String]('d', "mqtt persistence dir - default: 100")
         .text("mqtt persistence dir")
         .action((x, c) => c.copy(dir = x))
+      opt[String]('m', "mqtt dest - default: kafkaSource")
+        .text("mqtt dest")
+        .action((x, c) => c.copy(mqttdest = x))
+      opt[String]('s', "mqtt server - default: hpc0982")
+        .text("mqtt server")
+        .action((x, c) => c.copy(mqttserver = x))
     }
 
     parser.parse(args, Params()).foreach { param =>
@@ -143,8 +151,8 @@ object send_images_cifar_stream_mqtt {
       }
 
       // mqtt out
-      val brokerUrl = "tcp://hpc0982:1883"
-      val topic = "meow"
+      val brokerUrl = "tcp://"+param.mqttserver+":1883"
+      val topic = param.mqttdest
       var client: MqttClient = null
       // Creating new persistence for mqtt client
       val persistence = new MqttDefaultFilePersistence(param.dir)
