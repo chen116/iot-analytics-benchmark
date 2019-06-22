@@ -87,7 +87,7 @@ object infer_cifar_stream_kafka {
                        batchSize: Int = 2000,
                        kafkahost: String = "hpc0981:9092",
                        kafkain: String = "meow",
-                       kafkaout: String = "res",
+                       kafkaout: String = "res"
 
                      )
 
