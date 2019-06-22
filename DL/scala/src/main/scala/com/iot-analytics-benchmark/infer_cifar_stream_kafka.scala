@@ -78,7 +78,7 @@ object infer_cifar_stream_kafka {
 
     // kafka out
     val props = new Properties()
-    props.put("bootstrap.servers", "hpc0981:9092")
+    props.put("bootstrap.servers", "hpc0990:9092")
     props.put("client.id", "viccc2")
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
@@ -99,7 +99,9 @@ object infer_cifar_stream_kafka {
                        sourceIPAddress: String = "192.168.1.1",
                        sourcePort: Int = 10000,
                        model: String = "",
-                       batchSize: Int = 2000
+                       batchSize: Int = 2000,
+                       kafkahost: String = "hpc0981:9092",
+                       kafkatopic: String = "kafkain"
                      )
 
     val parser = new OptionParser[Params]("infer_cifar_stream_kafka") {
@@ -119,6 +121,12 @@ object infer_cifar_stream_kafka {
       opt[Int]('b', "batchSize")
         .text("batch size")
         .action((x, c) => c.copy(batchSize = x))
+      opt[String]('h', "kafkahost")
+        .text("kafkahost")
+        .action((x, c) => c.copy(kafkahost = x))
+      opt[String]('t', "kafkatopic")
+        .text("kafkatopic")
+        .action((x, c) => c.copy(kafkatopic = x))
     }
 
     parser.parse(args, Params()).foreach { param =>
@@ -146,10 +154,10 @@ object infer_cifar_stream_kafka {
 
       //kafka stream in
       val reporting_interval = 5
-      val topic = "meow"
+      val topic = param.kafkatopic
       val ssc = new StreamingContext(sc, Seconds(reporting_interval))
       val topicsSet = List(topic).toSet
-      val kafkaParams = Map[String, String]("bootstrap.servers" -> "hpc0981:9092")
+      val kafkaParams = Map[String, String]("bootstrap.servers" -> param.kafkahost)
       val image_stream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topicsSet)
       // end kafka stream in
 
