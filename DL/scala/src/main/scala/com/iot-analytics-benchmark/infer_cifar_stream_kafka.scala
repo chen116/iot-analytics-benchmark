@@ -76,22 +76,7 @@ object infer_cifar_stream_kafka {
 
   def main(args: Array[String]) {
 
-    // kafka out
-    val props = new Properties()
-    props.put("bootstrap.servers", "hpc0990:9092")
-    props.put("client.id", "viccc2")
-    props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-    props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-    val kaf_producer = new KafkaProducer[String,String](props)
-    def sendAsync(value: String):Unit = {
-      val record = new ProducerRecord[String, String]("res", value)
-      val p = Promise[(RecordMetadata, Exception)]()
-      kaf_producer.send(record, new Callback {
-        override def onCompletion(metadata: RecordMetadata, exception: Exception): Unit = {
-          p.success((metadata, exception))
-        }
-      })
-    }
+
 
 
     case class Params(
@@ -101,7 +86,9 @@ object infer_cifar_stream_kafka {
                        model: String = "",
                        batchSize: Int = 2000,
                        kafkahost: String = "hpc0981:9092",
-                       kafkatopic: String = "kafkain"
+                       kafkain: String = "meow",
+                       kafkaout: String = "res",
+
                      )
 
     val parser = new OptionParser[Params]("infer_cifar_stream_kafka") {
@@ -124,9 +111,12 @@ object infer_cifar_stream_kafka {
       opt[String]('h', "kafkahost")
         .text("kafkahost")
         .action((x, c) => c.copy(kafkahost = x))
-      opt[String]('t', "kafkatopic")
-        .text("kafkatopic")
-        .action((x, c) => c.copy(kafkatopic = x))
+      opt[String]('t', "kafkain")
+        .text("kafkain")
+        .action((x, c) => c.copy(kafkain = x))
+      opt[String]('t', "kafkaout")
+        .text("kafkaout")
+        .action((x, c) => c.copy(kafkaout = x))
     }
 
     parser.parse(args, Params()).foreach { param =>
@@ -150,11 +140,26 @@ object infer_cifar_stream_kafka {
 //      val ssc = new StreamingContext(sc, Seconds(param.reportingInterval))
 //      val image_stream = ssc.socketTextStream(param.sourceIPAddress, param.sourcePort)
 
-
+      // kafka out
+      val props = new Properties()
+      props.put("bootstrap.servers", param.kafkahost)
+      props.put("client.id", "viccc2")
+      props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+      props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+      val kaf_producer = new KafkaProducer[String,String](props)
+      def sendAsync(value: String):Unit = {
+        val record = new ProducerRecord[String, String](param.kafkaout, value)
+        val p = Promise[(RecordMetadata, Exception)]()
+        kaf_producer.send(record, new Callback {
+          override def onCompletion(metadata: RecordMetadata, exception: Exception): Unit = {
+            p.success((metadata, exception))
+          }
+        })
+      }
 
       //kafka stream in
       val reporting_interval = 5
-      val topic = param.kafkatopic
+      val topic = param.kafkain
       val ssc = new StreamingContext(sc, Seconds(reporting_interval))
       val topicsSet = List(topic).toSet
       val kafkaParams = Map[String, String]("bootstrap.servers" -> param.kafkahost)
