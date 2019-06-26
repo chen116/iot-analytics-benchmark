@@ -97,28 +97,15 @@ object send_images_cifar_stream_kafka {
 
   def main(args: Array[String]) {
 
-    // kafka out
-    val props = new Properties()
-    props.put("bootstrap.servers", "hpc0981:9092")
-    props.put("client.id", "viccc")
-    props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-    props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-    val kaf_producer = new KafkaProducer[String,String](props)
-    def sendAsync(value: String):Unit = {
-      val record = new ProducerRecord[String, String]("meow", value)
-      val p = Promise[(RecordMetadata, Exception)]()
-      kaf_producer.send(record, new Callback {
-        override def onCompletion(metadata: RecordMetadata, exception: Exception): Unit = {
-          p.success((metadata, exception))
-        }
-      })
-    }
+
 
 
     case class Params(
                        folder: String = "cifar-10-batches-bin",
                        imagesPerSec: Int  = 10,
-                       totalImages: Int = 100
+                       totalImages: Int = 100,
+                       kafkahost: String = "hpc0981:9092",
+                       kafkain: String = "meow",
                      )
 
     val parser = new OptionParser[Params]("send_images_cifar") {
@@ -131,9 +118,34 @@ object send_images_cifar_stream_kafka {
       opt[Int]('t', "totalImages - default: 100")
         .text("total images")
         .action((x, c) => c.copy(totalImages = x))
+      opt[String]('h', "kafkahost")
+        .text("kafkahost")
+        .action((x, c) => c.copy(kafkahost = x))
+      opt[String]('t', "kafkain")
+        .text("kafkain")
+        .action((x, c) => c.copy(kafkain = x))
     }
 
     parser.parse(args, Params()).foreach { param =>
+
+
+      // kafka out
+      val props = new Properties()
+      props.put("bootstrap.servers", param.kafkahost +":9092")
+      props.put("client.id", "viccc")
+      props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+      props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+      val kaf_producer = new KafkaProducer[String,String](props)
+      def sendAsync(value: String):Unit = {
+        val record = new ProducerRecord[String, String](param.kafkain, value)
+        val p = Promise[(RecordMetadata, Exception)]()
+        kaf_producer.send(record, new Callback {
+          override def onCompletion(metadata: RecordMetadata, exception: Exception): Unit = {
+            p.success((metadata, exception))
+          }
+        })
+      }
+
 
       System.err.println("Will send to kafka" + param.imagesPerSec + " images per second for a total of " + param.totalImages + " images")
 
