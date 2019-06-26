@@ -105,7 +105,7 @@ object send_images_cifar_stream_kafka {
                        imagesPerSec: Int  = 10,
                        totalImages: Int = 100,
                        kafkahost: String = "hpc0981:9092",
-                       kafkain: String = "meow",
+                       kafkain: String = "meow"
                      )
 
     val parser = new OptionParser[Params]("send_images_cifar") {
