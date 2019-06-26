@@ -114,7 +114,7 @@ object infer_cifar_stream_kafka {
       opt[String]('t', "kafkain")
         .text("kafkain")
         .action((x, c) => c.copy(kafkain = x))
-      opt[String]('t', "kafkaout")
+      opt[String]('o', "kafkaout")
         .text("kafkaout")
         .action((x, c) => c.copy(kafkaout = x))
     }
