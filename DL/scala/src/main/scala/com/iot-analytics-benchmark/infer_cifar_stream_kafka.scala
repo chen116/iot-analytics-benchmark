@@ -185,9 +185,9 @@ object infer_cifar_stream_kafka {
           empty_intervals.add(1)
           println("%s: No input".format(Instant.now.toString))
           if (interval.value > 0) {
-            sendAsync("inside run_model rdd count is 0 but bad value")
+            sendAsync("No input")
             println("%s: Stopping stream".format(Instant.now.toString))
-            ssc.stop()
+//            ssc.stop()
           }
         }
         else {
