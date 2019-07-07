@@ -174,7 +174,7 @@ object send_images_cifar_stream_mqtt {
       //  Send images from array, wrapping if necessary
       System.err.println(Instant.now() + ": Sending images")
       for (i <- 0 to param.totalImages-1) {
-        println(image_string_array(i % image_string_array.length))
+        println(image_string_array(i % image_string_array.length).charAt(0))
         msgTopic.publish(new MqttMessage(  image_string_array(i % image_string_array.length).getBytes("utf-8")))
         System.out.flush()
         if ((i+1) % param.imagesPerSec == 0 ) System.err.println(Instant.now() + ": " + (i+1) + " images sent")
