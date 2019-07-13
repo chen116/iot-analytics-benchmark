@@ -185,7 +185,8 @@ object infer_cifar_stream_kafka {
 
           empty_intervals.add(1)
 //          println("%s: No input".format(Instant.now.toString))
-          if (interval.value > 0) {
+          if (interval.value == 0) {
+            sendAsync("first stream, empty")
 //            sendAsync("No input")
 //            println("%s: Stopping stream".format(Instant.now.toString))
 //            ssc.stop()
@@ -225,7 +226,7 @@ object infer_cifar_stream_kafka {
           sendAsync("%s:accumed: %d, %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, interval.value,input_length, correct_preds, 100.0*correct_preds/input_length))
         }
       }
-      sendAsync("BEEEEfore streammmmm")
+
       // Run model on each batch
 //      image_stream.foreachRDD(run_model(_))
       image_stream.map(_._2).foreachRDD(run_model(_))
