@@ -178,20 +178,20 @@ object infer_cifar_stream_kafka {
       def run_model(rdd: RDD[String]): Unit = {
         // Input rdds consist of batches of labeled images encoded as strings
         // Skip empty intervals and stop on first empty interval after start
-        sendAsync("inside run_model")
+//        sendAsync("inside run_model")
         if (rdd.count == 0) {
           sendAsync("inside run_model rdd count is 0")
 
           empty_intervals.add(1)
-          println("%s: No input".format(Instant.now.toString))
+//          println("%s: No input".format(Instant.now.toString))
           if (interval.value > 0) {
-            sendAsync("No input")
-            println("%s: Stopping stream".format(Instant.now.toString))
+//            sendAsync("No input")
+//            println("%s: Stopping stream".format(Instant.now.toString))
 //            ssc.stop()
           }
         }
         else {
-          sendAsync("inside run_model rdd count is > 0")
+//          sendAsync("inside run_model rdd count is > 0")
 
           // Non-empty interval
           interval.add(1)
@@ -219,7 +219,7 @@ object infer_cifar_stream_kafka {
             left + right
           })
           tot_correct_preds.add(correct_preds)
-          println("%s: %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, input_length, correct_preds, 100.0*correct_preds/input_length))
+//          println("%s: %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, input_length, correct_preds, 100.0*correct_preds/input_length))
           sendAsync("%s: %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, input_length, correct_preds, 100.0*correct_preds/input_length))
         }
       }
