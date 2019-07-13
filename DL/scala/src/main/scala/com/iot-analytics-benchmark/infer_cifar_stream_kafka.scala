@@ -180,7 +180,7 @@ object infer_cifar_stream_kafka {
         // Skip empty intervals and stop on first empty interval after start
 //        sendAsync("inside run_model")
         if (rdd.count == 0) {
-          sendAsync("inside run_model rdd count is 0")
+//          sendAsync("inside run_model rdd count is 0")
 
           empty_intervals.add(1)
 //          println("%s: No input".format(Instant.now.toString))
