@@ -160,7 +160,7 @@ object infer_cifar_stream_kafka {
       //kafka stream in
       val reporting_interval = 5
       val topic = param.kafkain
-      val ssc = new StreamingContext(sc, Milliseconds(reporting_interval))
+      val ssc = new StreamingContext(sc, Seconds(reporting_interval))
       val topicsSet = List(topic).toSet
       val kafkaParams = Map[String, String]("bootstrap.servers" -> param.kafkahost)
       val image_stream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topicsSet)
