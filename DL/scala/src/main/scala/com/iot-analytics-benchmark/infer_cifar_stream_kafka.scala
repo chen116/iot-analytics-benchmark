@@ -132,7 +132,7 @@ object infer_cifar_stream_kafka {
       val images  = sc.accumulator(0)
       val tot_correct_preds  = sc.accumulator(0)
       val tot_correct_eval  = sc.accumulator(0)
-      val acc_images = sc.longAccumulator
+//      val acc_images = sc.longAccumulator
 
       Engine.init
       val partitionNum = Engine.nodeNumber() * Engine.coreNumber()
@@ -196,7 +196,7 @@ object infer_cifar_stream_kafka {
 
           // Non-empty interval
           interval.add(1)
-          acc_images.add(1)
+//          acc_images.add(1)
           val input_length = rdd.count.toInt
           images.add(input_length)
           // Parse each line of rdd (labeled images) and repartition result - BigDL requires total batch be divisible by partitionNum
@@ -222,7 +222,7 @@ object infer_cifar_stream_kafka {
           })
           tot_correct_preds.add(correct_preds)
 //          println("%s: %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, input_length, correct_preds, 100.0*correct_preds/input_length))
-          sendAsync("%s:accumed: %d, %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, acc_images,input_length, correct_preds, 100.0*correct_preds/input_length))
+          sendAsync("%s:accumed: %d, %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, interval.value,input_length, correct_preds, 100.0*correct_preds/input_length))
         }
       }
       sendAsync("BEEEEfore streammmmm")
