@@ -158,7 +158,7 @@ object infer_cifar_stream_kafka {
       }
 
       //kafka stream in
-      val reporting_interval = 5
+      val reporting_interval = param.reportingInterval
       val topic = param.kafkain
       val ssc = new StreamingContext(sc, Milliseconds(reporting_interval))
       val topicsSet = List(topic).toSet
