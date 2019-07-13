@@ -223,7 +223,7 @@ object infer_cifar_stream_kafka {
           })
           tot_correct_preds.add(correct_preds)
 //          println("%s: %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, input_length, correct_preds, 100.0*correct_preds/input_length))
-          sendAsync("%s:accumed: %d, %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, interval.value,input_length, correct_preds, 100.0*correct_preds/input_length))
+          sendAsync("%s:accumed: %d, %d images received in interval - %d or %.1f%% predicted correctly".format(Instant.now.toString, images.value,input_length, correct_preds, 100.0*correct_preds/input_length))
         }
       }
 
