@@ -31,12 +31,11 @@ import java.util.Random
 
 import scopt.OptionParser
 import java.util.Properties
+import java.util.concurrent.Executors
 
 import org.apache.kafka.clients.producer.{Callback, KafkaProducer, ProducerRecord, RecordMetadata}
 
 import scala.concurrent.Promise
-
-
 import org.eclipse.paho.client.mqttv3.MqttClient
 import org.eclipse.paho.client.mqttv3.MqttException
 import org.eclipse.paho.client.mqttv3.MqttMessage
@@ -102,18 +101,6 @@ object send_images_cifar_stream_mqtt_multi {
     while (waitUntil > System.nanoTime()) {}
   }
 
-
-  class MyThread extends Thread
-  {
-    override def run()
-    {
-      // Displaying the thread that is running
-      println("Thread " + Thread.currentThread().getName() +
-        " is running.")
-    }
-  }
-
-
   def main(args: Array[String]) {
 
 
@@ -126,7 +113,6 @@ object send_images_cifar_stream_mqtt_multi {
                        mqttdest: String = "kafkaSource",
                        mqttserver: String = "hpc0982"
                      )
-
     val parser = new OptionParser[Params]("send_images_cifar") {
       opt[String]('f', "folder")
         .text("the location of Cifar10 dataset - default: cifar-10-batches-bin")
@@ -148,55 +134,71 @@ object send_images_cifar_stream_mqtt_multi {
         .action((x, c) => c.copy(mqttserver = x))
     }
 
-    parser.parse(args, Params()).foreach { param =>
+    class Psend(percer: OptionParser[Params],cores: Int) extends Runnable {
 
-      System.err.println("Will send to kafka" + param.imagesPerSec + " images per second for a total of " + param.totalImages + " images")
+      override def run() {
+        percer.parse(args, Params()).foreach { param =>
 
-      //  First, write labeled test images to an array
-      val image_string_array = new Array[String](10000)
-      val images = loadTest(param.folder)
-      for (i <- 0 to images.length-1) {
-        val d = images(i).data.mkString(",")
-        val l = images(i).label.toString
-        val dl = l + "," + d
-        image_string_array(i) = dl
+          System.err.println("Will send to kafka" + param.imagesPerSec + " images per second for a total of " + param.totalImages + " images")
+
+          //  First, write labeled test images to an array
+          val image_string_array = new Array[String](10000)
+          val images = loadTest(param.folder)
+          for (i <- 0 to images.length-1) {
+            val d = images(i).data.mkString(",")
+            val l = images(i).label.toString
+            val dl = l + "," + d
+            image_string_array(i) = dl
+          }
+
+          // mqtt out
+          val brokerUrl = "tcp://"+param.mqttserver+":1883"
+          val topic = param.mqttdest
+          var client: MqttClient = null
+          // Creating new persistence for mqtt client
+          val persistence = new MqttDefaultFilePersistence(param.dir)
+          client = new MqttClient(brokerUrl, MqttClient.generateClientId, persistence)
+          client.connect()
+          val msgTopic = client.getTopic(topic)
+
+          System.err.println("Pausing 1 seconds - start image_stream_cifar")
+          Thread.sleep(1000)
+
+          // Use lognormal distribution to generate a positive random wait time with mean determined from imagesPerSecond and long tail
+          val rand = new Random
+          val mean_wait = 1.0/param.imagesPerSec
+          // Set standard deviation to half the mean_wait
+          val std_dev = mean_wait/2.0
+
+          val t1 = System.nanoTime
+
+          //  Send images from array, wrapping if necessary
+          System.err.println(Instant.now() + ": Sending images")
+          for (i <- 0 to param.totalImages/cores-1) {
+            println(image_string_array(i % image_string_array.length).charAt(0))
+            msgTopic.publish(new MqttMessage(  image_string_array(i % image_string_array.length).getBytes("utf-8")))
+            System.out.flush()
+            if ((i+1) % param.imagesPerSec == 0 ) System.err.println(Instant.now() + ": " + (i+1) + " images sent")
+            // Wait a random time from lognormal distribution with mean mean_wait
+            accurateWait(mean_wait * exp(rand.nextGaussian()*std_dev + mean_wait)/exp(mean_wait + pow(std_dev,2)/2))
+          }
+
+          val t2 = System.nanoTime
+          client.disconnect()
+          System.err.println(Instant.now() + ": Sent " + param.totalImages + " images in " + "%.1f".format((t2-t1)/1000000000.0) + " seconds")
+        }
       }
 
-      // mqtt out
-      val brokerUrl = "tcp://"+param.mqttserver+":1883"
-      val topic = param.mqttdest
-      var client: MqttClient = null
-      // Creating new persistence for mqtt client
-      val persistence = new MqttDefaultFilePersistence(param.dir)
-      client = new MqttClient(brokerUrl, MqttClient.generateClientId, persistence)
-      client.connect()
-      val msgTopic = client.getTopic(topic)
-
-      System.err.println("Pausing 1 seconds - start image_stream_cifar")
-      Thread.sleep(1000)
-
-      // Use lognormal distribution to generate a positive random wait time with mean determined from imagesPerSecond and long tail
-      val rand = new Random
-      val mean_wait = 1.0/param.imagesPerSec
-      // Set standard deviation to half the mean_wait
-      val std_dev = mean_wait/2.0
-
-      val t1 = System.nanoTime
-
-      //  Send images from array, wrapping if necessary
-      System.err.println(Instant.now() + ": Sending images")
-      for (i <- 0 to param.totalImages-1) {
-        println(image_string_array(i % image_string_array.length).charAt(0))
-        msgTopic.publish(new MqttMessage(  image_string_array(i % image_string_array.length).getBytes("utf-8")))
-        System.out.flush()
-        if ((i+1) % param.imagesPerSec == 0 ) System.err.println(Instant.now() + ": " + (i+1) + " images sent")
-        // Wait a random time from lognormal distribution with mean mean_wait
-        accurateWait(mean_wait * exp(rand.nextGaussian()*std_dev + mean_wait)/exp(mean_wait + pow(std_dev,2)/2))
-      }
-
-      val t2 = System.nanoTime
-      client.disconnect()
-      System.err.println(Instant.now() + ": Sent " + param.totalImages + " images in " + "%.1f".format((t2-t1)/1000000000.0) + " seconds")
     }
+
+
+
+
+    val pool = Executors.newFixedThreadPool(4) // 4 threads
+    pool.submit(new Psend(parser,4))
+
+
   }
 }
+
+//https://blog.matthewrathbone.com/2017/03/28/scala-concurrency-options.html
