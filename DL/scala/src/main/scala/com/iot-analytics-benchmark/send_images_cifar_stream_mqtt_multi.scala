@@ -134,7 +134,7 @@ object send_images_cifar_stream_mqtt_multi {
         .action((x, c) => c.copy(mqttserver = x))
     }
 
-    class Psend(percer: OptionParser[Params],cores: Int) extends Runnable {
+    class Psend(percer: OptionParser[Params],cores: Int) extends Thread {
 
       override def run() {
         percer.parse(args, Params()).foreach { param =>
@@ -192,10 +192,14 @@ object send_images_cifar_stream_mqtt_multi {
     }
 
 
-
-
-    val pool = Executors.newFixedThreadPool(4) // 4 threads
-    pool.submit(new Psend(parser,4))
+    for (x<-1 to 4)
+    {
+      var th = new Psend(parser,4)
+      th.setName(x.toString())
+      th.start()
+    }
+//    val thread = Executors.newFixedThreadPool(4) // 4 threads
+//    pool.submit(new Psend(parser,4))
 
 
   }
